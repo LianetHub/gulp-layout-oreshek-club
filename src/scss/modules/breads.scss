@@ -1,0 +1,53 @@
+.breadcrumbs {
+	position: relative;
+	z-index: 3;
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+	color: #666a71;
+	gap: 0.25rem;
+	@media (min-width: $md5) {
+		gap: 0.5rem;
+	}
+	// .breadcrumbs__item
+	&__item {
+		display: flex;
+		align-items: center;
+		font-size: rem(10);
+		gap: 0.25rem;
+		@media (min-width: $md5) {
+			gap: 0.5rem;
+			font-size: rem(14);
+		}
+		@media (min-width: $md3) {
+			font-size: rem(18);
+		}
+		&:not(:last-child) {
+			&::before {
+				order: 1;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				@extend %ic, .icon-chevron;
+				width: 0.75rem;
+				height: 0.75rem;
+				@media (min-width: $md5) {
+					width: 1.125rem;
+					height: 1.125rem;
+				}
+			}
+		}
+	}
+	// .breadcrumbs__link
+	&__link {
+		transition: color 0.3s ease;
+		@media (any-hover: hover) {
+			&:hover {
+				color: $yellow;
+			}
+		}
+		&.active {
+			color: $yellow;
+		}
+	}
+}
