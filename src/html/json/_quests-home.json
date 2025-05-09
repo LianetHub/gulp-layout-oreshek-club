@@ -1,0 +1,50 @@
+[
+    {
+        "url": "mafia-den.html",
+        "images": "@img/quests/mafia-den.jpg",
+        "title": "Логово <span class='color-accent'>мафии</span>",
+        "description": "Что скрывается за фасадом добропорядочного бизнесмена?",
+        "users": "2-8",
+        "price": "6000 ₽"
+    },
+    {
+        "url": "gunnars-hut.html",
+        "images": "@img/quests/gunnars-hut.jpg",
+        "title": "Проклятая <span class='color-accent'>хижина&nbsp;Гуннара</span>",
+        "description": "Верните Тору его молот и помогите богам Асгарда",
+        "users": "2-6",
+        "price": "6000 ₽"
+    },
+    {
+        "url": "baba-yaga.html",
+        "images": "@img/quests/baba-yaga.jpg",
+        "title": "Баба-Яга",
+        "description": "Вы похищены и заперты в хижине Бабы Яги",
+        "users": "2-8",
+        "price": "6000 ₽"
+    },
+    {
+        "url": "musketeers.html",
+        "images": "@img/quests/musketeers.jpg",
+        "title": "Мушкетеры в <span class='color-accent'>замке&nbsp;кардинала</span>",
+        "description": "Вы - смелые мушкетеры. Под страхом смерти проникаете в замок",
+        "users": "2-8",
+        "price": "6000 ₽"
+    },
+    {
+        "url": "witch-house.html",
+        "images": "@img/quests/witch-house.jpg",
+        "title": "Дом <span class='color-accent'>Ведьмы</span>",
+        "description": "Вы заблудились и набрели на пряничный домик...",
+        "users": "2-6",
+        "price": "6000 ₽"
+    },
+    {
+        "url": "poltergeist.html",
+        "images": "@img/quests/poltergeist.jpg",
+        "title": "Полтергейст",
+        "description": "Ваша задача расследовать исчезновение трех девушек...",
+        "users": "2-6",
+        "price": "6000 ₽"
+    }
+]

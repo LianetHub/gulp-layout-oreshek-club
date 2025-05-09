@@ -11,10 +11,12 @@
 // ======================================ШРИФТЫ===============================================
 
 // Шрифт по умолчанию
-$fontfamily: "Gilroy";
-$font-manrope: "Manrope";
+$fontfamily: "Inter";
+$font-heraclito: "Heraclito";
+$font-lighthaus: "Lighthaus";
 // Шрифт по умолчанию
 
+$md0: 1599.98px;
 $md1: 1399.98px;
 $md2: 1199.98px;
 $md3: 991.98px;
@@ -26,12 +28,12 @@ $md6: 389.98px;
 
 $minWidth: 375; // Минимальная ширина страницы
 $maxWidth: 1920; // Ширина макета
-$maxWidthContainer: rem(1316); // Максимальная ширина ограничивающего контейнера
+$maxWidthContainer: rem(1400); // Максимальная ширина ограничивающего контейнера
 $containerPadding: 30;
 
 // ЦВЕТА
 
-$white: #fff;
+$white: #feffff;
 $black: #000;
 $glass: rgba(60, 165, 161, 0.11);
 $yellow: #fecd19;
