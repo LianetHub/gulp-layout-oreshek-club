@@ -4,22 +4,60 @@
 import * as devFunctions from "./modules/functions.js";
 
 
-//  init Fancybox
-if (typeof Fancybox !== "undefined" && Fancybox !== null) {
-    Fancybox.bind("[data-fancybox]", {
-        dragToClose: false,
-        closeButton: false
-    });
-}
 
 
 document.addEventListener("DOMContentLoaded", () => {
 
+    //  init Fancybox
+    if (typeof Fancybox !== "undefined" && Fancybox !== null) {
+        Fancybox.bind("[data-fancybox]", {
+            dragToClose: false,
+            closeButton: false,
+            on: {
+                ready: (fancybox) => {
+                    const trigger = fancybox.options.triggerEl;
+
+                    if (trigger && trigger.classList.contains('booking__time')) {
+
+
+                        const datetime = trigger.dataset.datetime;
+                        const price = trigger.dataset.price;
+                        const title = trigger.dataset.title;
+
+                        const popup = document.getElementById('booking');
+
+                        if (popup) {
+                            const dateInput = popup.querySelector('.quest-date');
+                            const priceEl = popup.querySelector('.quest-price');
+                            const titleInput = popup.querySelector('.quest-name');
+
+                            const [datePart, timePart] = datetime.split('T');
+                            const [year, month, day] = datePart.split('-');
+
+                            const monthsRu = [
+                                'января', 'февраля', 'марта', 'апреля', 'мая', 'июня',
+                                'июля', 'августа', 'сентября', 'октября', 'ноября', 'декабря'
+                            ];
+
+                            const formattedDate = `${parseInt(day)} ${monthsRu[parseInt(month) - 1]} ${year}, ${timePart}`;
+
+
+                            if (dateInput) dateInput.value = formattedDate;
+                            if (priceEl) priceEl.textContent = `${price} руб.`;
+                            if (titleInput) titleInput.value = title;
+                        }
+                    }
+                }
+            }
+        });
+    }
+
+
+
+
     devFunctions.isWebp();
     devFunctions.OS();
     devFunctions.mask();
-    devFunctions.beforeSlider();
-
 
     document.querySelectorAll("select")?.forEach(select => {
         select.addEventListener("click", function () {
@@ -73,44 +111,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
 
-    Fancybox.bind('[data-fancybox]', {
-        on: {
-            ready: (fancybox) => {
-                const trigger = fancybox.options.triggerEl;
-
-                if (trigger && trigger.classList.contains('booking__time')) {
-
-
-                    const datetime = trigger.dataset.datetime;
-                    const price = trigger.dataset.price;
-                    const title = trigger.dataset.title;
-
-                    const popup = document.getElementById('booking');
-
-                    if (popup) {
-                        const dateInput = popup.querySelector('.quest-date');
-                        const priceEl = popup.querySelector('.quest-price');
-                        const titleInput = popup.querySelector('.quest-name');
-
-                        const [datePart, timePart] = datetime.split('T');
-                        const [year, month, day] = datePart.split('-');
-
-                        const monthsRu = [
-                            'января', 'февраля', 'марта', 'апреля', 'мая', 'июня',
-                            'июля', 'августа', 'сентября', 'октября', 'ноября', 'декабря'
-                        ];
-
-                        const formattedDate = `${parseInt(day)} ${monthsRu[parseInt(month) - 1]} ${year}, ${timePart}`;
-
-
-                        if (dateInput) dateInput.value = formattedDate;
-                        if (priceEl) priceEl.textContent = `${price} руб.`;
-                        if (titleInput) titleInput.value = title;
-                    }
-                }
-            }
-        }
-    });
 
 
     // sliders

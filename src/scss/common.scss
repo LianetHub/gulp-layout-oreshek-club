@@ -183,6 +183,11 @@ body {
 				bottom: -3rem;
 			}
 		}
+		&::before {
+			@media (max-width: $md4) {
+				height: 4rem;
+			}
+		}
 	}
 	// .promo__container
 	&__container {

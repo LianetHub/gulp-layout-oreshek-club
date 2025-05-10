@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ru">
+    @@include('html/_head.html', {
+    'title': 'Дом Ведьмы'
+    })
+    <body>
+        <div class="wrapper">
+            @@include('html/_header.html', {})
+            <main class="page">
+                <section class="promo promo--quest" style="background-image: url('@img/promo/witch-house.jpg');">
+                    <div class="promo__container container-sm">
+                        <div class="promo__offer">
+                            <h1 class="promo__offer-title h3">
+                                <span class="color-accent">Красочный квест</span>
+                                для&nbsp;сплоченной команды
+                            </h1>
+                            <div class="promo__offer-subtitle text-block">Прохождение с ведущим c 7 лет</div>
+                            <div class="promo__offer-stats text-block">
+                                <div class="promo__offer-stat icon-users">2-8</div>
+                                <div class="promo__offer-stat icon-currency">6000 ₽</div>
+                                <div class="promo__offer-stat icon-criminal">от 12</div>
+                                <div class="promo__offer-stat icon-time">60 мин</div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="description">
+                    <div class="description__container container-sm">
+                        <h2 class="description__title">Дом Ведьмы</h2>
+                        <div class="description__body text-block-lg">
+                            <p>Спаситесь из пряничного домика и логова ведьмы-людоедки до прихода хозяйки!</p>
+                            <p>А ведь все так хорошо начиналось. Лес, залитый солнечным светом, шелест листвы и пушистые зайчики, весело резвящиеся на полянке… Неудивительно, что вы потеряли счет времени. И вот вы заблудились и набрели на пряничный домик, одиноко стоящий на полянке. Стемнело, а ночью здесь все уже не выглядит таким дружелюбным. Беспечные зверушки явно знают какую-то тайну и перешептываются у вас за спиной, а милая избушка оказалась логовом ведьмы-людоедки. Но слишком поздно, ее двери захлопнулись за вами, а кровожадная старуха вот-вот вернется из темного леса.</p>
+                        </div>
+                        <div class="description__gallery swiper">
+                            <div class="swiper-wrapper">
+                                <a href="@img/witch-house/01.png" data-fancybox="quset-gallery" class="description__gallery-item swiper-slide">
+                                    <img src="@img/witch-house/01.png" class="cover-image" alt="Фото галлереи">
+                                </a>
+                                <a href="@img/witch-house/02.png" data-fancybox="quset-gallery" class="description__gallery-item swiper-slide">
+                                    <img src="@img/witch-house/02.png" class="cover-image" alt="Фото галлереи">
+                                </a>
+                                <a href="@img/witch-house/03.png" data-fancybox="quset-gallery" class="description__gallery-item swiper-slide">
+                                    <img src="@img/witch-house/03.png" class="cover-image" alt="Фото галлереи">
+                                </a>
+                                <a href="@img/witch-house/04.png" data-fancybox="quset-gallery" class="description__gallery-item swiper-slide">
+                                    <img src="@img/witch-house/04.png" class="cover-image" alt="Фото галлереи">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="banner">
+                    <div class="banner__body">
+                        <div class="banner__container">
+                            <h2 class="banner__title">
+                                <span class="color-accent">Спаситесь из пряничного домика</span> и логова ведьмы-людоедки до прихода хозяйки!
+                            </h2>
+                        </div>
+                    </div>
+                    <div class="banner__image">
+                        <img src="@img/banners/witch-house.jpg" class="cover-image" alt="Баннер">
+                    </div>
+                </section>
+                @@include('html/_booking.html', {
+                "title": "Дом Ведьмы"
+                })
+                @@include('html/_quests.html', {})
+                @@include('html/_contacts-type-1.html', {})
+            </main>
+            @@include('html/_footer.html', {})
+            @@include('html/_modal.html', {})
+            @@include('html/_modal-booking.html', {})
+            @@include('html/_js.html', {})
+        </div>
+    </body>
+</html>

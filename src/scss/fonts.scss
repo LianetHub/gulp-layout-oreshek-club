@@ -1,8 +1,8 @@
 @font-face {
-                            font-family: 'Inter';
+                            font-family: 'Heraclito';
                             font-display: swap;
-                            src: url("../fonts/Inter-Black.woff2") format("woff2"), url("../fonts/Inter-Black.woff") format("woff");
-                            font-weight: 900;
+                            src: url("../fonts/Heraclito-Regular.woff2") format("woff2"), url("../fonts/Heraclito-Regular.woff") format("woff");
+                            font-weight: 400;
                             font-style: normal;
                         }
 @font-face {
@@ -13,24 +13,10 @@
                             font-style: normal;
                         }
 @font-face {
-                            font-family: 'Heraclito';
-                            font-display: swap;
-                            src: url("../fonts/Heraclito-Regular.woff2") format("woff2"), url("../fonts/Heraclito-Regular.woff") format("woff");
-                            font-weight: 400;
-                            font-style: normal;
-                        }
-@font-face {
                             font-family: 'Inter';
                             font-display: swap;
-                            src: url("../fonts/Inter-Regular.woff2") format("woff2"), url("../fonts/Inter-Regular.woff") format("woff");
-                            font-weight: 400;
-                            font-style: normal;
-                        }
-@font-face {
-                            font-family: 'Inter';
-                            font-display: swap;
-                            src: url("../fonts/Inter-Bold.woff2") format("woff2"), url("../fonts/Inter-Bold.woff") format("woff");
-                            font-weight: 700;
+                            src: url("../fonts/Inter-Black.woff2") format("woff2"), url("../fonts/Inter-Black.woff") format("woff");
+                            font-weight: 900;
                             font-style: normal;
                         }
 @font-face {
@@ -41,9 +27,23 @@
                             font-style: italic;
                         }
 @font-face {
+                            font-family: 'Inter';
+                            font-display: swap;
+                            src: url("../fonts/Inter-Regular.woff2") format("woff2"), url("../fonts/Inter-Regular.woff") format("woff");
+                            font-weight: 400;
+                            font-style: normal;
+                        }
+@font-face {
                             font-family: 'Lighthaus';
                             font-display: swap;
                             src: url("../fonts/Lighthaus-Regular.woff2") format("woff2"), url("../fonts/Lighthaus-Regular.woff") format("woff");
                             font-weight: 400;
+                            font-style: normal;
+                        }
+@font-face {
+                            font-family: 'Inter';
+                            font-display: swap;
+                            src: url("../fonts/Inter-Bold.woff2") format("woff2"), url("../fonts/Inter-Bold.woff") format("woff");
+                            font-weight: 700;
                             font-style: normal;
                         }

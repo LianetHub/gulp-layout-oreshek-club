@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ru">
+    @@include('html/_head.html', {
+    'title': 'Мушкетеры в замке Кардинала'
+    })
+    <body>
+        <div class="wrapper">
+            @@include('html/_header.html', {})
+            <main class="page">
+                <section class="promo promo--quest" style="background-image: url('@img/promo/musketeers.jpg');">
+                    <div class="promo__container container-sm">
+                        <div class="promo__offer">
+                            <h1 class="promo__offer-title h3">
+                                <span class="color-accent">Невероятное приключение</span>
+                                для&nbsp;самых отважных
+                            </h1>
+                            <div class="promo__offer-subtitle text-block">Прохождение с ведущим c 10 лет</div>
+                            <div class="promo__offer-stats text-block">
+                                <div class="promo__offer-stat icon-users">3-8</div>
+                                <div class="promo__offer-stat icon-currency">6000 ₽</div>
+                                <div class="promo__offer-stat icon-criminal">от 14</div>
+                                <div class="promo__offer-stat icon-time">60 мин</div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="description">
+                    <div class="description__container container-sm">
+                        <h2 class="description__title">Мушкетеры <span class="color-accent">в замке Кардинала</span></h2>
+                        <div class="description__body text-block-lg">
+                            <p>
+                                Вы – смелые мушкетеры, под страхом смерти проникаете в его тайное убежище. Ваша задача найти две алмазные подвески королевы и выбраться из западни. На все у вас всего лишь один час! СМЕРТЬ или СЛАВА, третьего не дано.
+                            </p>
+                        </div>
+                        <div class="description__gallery swiper">
+                            <div class="swiper-wrapper">
+                                <a href="@img/musketeers/01.png" data-fancybox="quset-gallery" class="description__gallery-item swiper-slide">
+                                    <img src="@img/musketeers/01.png" class="cover-image" alt="Фото галлереи">
+                                </a>
+                                <a href="@img/musketeers/02.png" data-fancybox="quset-gallery" class="description__gallery-item swiper-slide">
+                                    <img src="@img/musketeers/02.png" class="cover-image" alt="Фото галлереи">
+                                </a>
+                                <a href="@img/musketeers/03.png" data-fancybox="quset-gallery" class="description__gallery-item swiper-slide">
+                                    <img src="@img/musketeers/03.png" class="cover-image" alt="Фото галлереи">
+                                </a>
+                                <a href="@img/musketeers/04.png" data-fancybox="quset-gallery" class="description__gallery-item swiper-slide">
+                                    <img src="@img/musketeers/04.png" class="cover-image" alt="Фото галлереи">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="banner">
+                    <div class="banner__body">
+                        <div class="banner__container">
+                            <h2 class="banner__title">
+                                <span class="color-accent">Мушкетёры, вперёд!</span> Алмазные подвески ждут!
+                            </h2>
+                        </div>
+                    </div>
+                    <div class="banner__image">
+                        <img src="@img/banners/musketeers.jpg" class="cover-image" alt="Баннер">
+                    </div>
+                </section>
+                @@include('html/_booking.html', {
+                "title": "Мушкетеры в замке Кардинала"
+                })
+                @@include('html/_quests.html', {})
+                @@include('html/_contacts-type-1.html', {})
+            </main>
+            @@include('html/_footer.html', {})
+            @@include('html/_modal.html', {})
+            @@include('html/_modal-booking.html', {})
+            @@include('html/_js.html', {})
+        </div>
+    </body>
+</html>
