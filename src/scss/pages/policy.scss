@@ -1,0 +1,53 @@
+.policy {
+	background: url("@img/decor-line-mobile.svg") center -5rem / 32.875rem auto no-repeat;
+	padding-top: calc($header + 3.75rem);
+	@media (min-width: $md4) {
+		padding-top: calc($header + 5.5rem);
+		background: url("@img/decor-line.svg") 0 -17rem / 100% auto no-repeat;
+	}
+	& h1 {
+		color: $yellow;
+		text-align: center;
+		font-size: 1.5625rem;
+		@media (min-width: $md5) {
+			font-size: 2.5rem;
+		}
+	}
+	& p {
+		&:not(:last-child) {
+			margin-bottom: 1.5rem;
+		}
+	}
+	& ul {
+		&:not(:last-child) {
+			margin-bottom: 1.5rem;
+		}
+		& li {
+			&:not(:last-child) {
+				margin-bottom: 1.5rem;
+			}
+		}
+	}
+	& h2 {
+		font-size: 1.125rem;
+		line-height: 140%;
+		font-family: $fontfamily;
+		&:not(:last-child) {
+			margin-bottom: 1.5rem;
+		}
+	}
+	// .policy__container
+	&__container {
+	}
+	// .policy__body
+	&__body {
+		line-height: 140%;
+		margin-top: 1.88rem;
+		padding: 0 2.06rem;
+		@media (min-width: $md4) {
+			margin-top: 3.75rem;
+			padding: 0;
+			font-size: 1.125rem;
+		}
+	}
+}

@@ -899,6 +899,9 @@ body.lock {
     height: 4rem;
   }
 }
+.promo.promo--for-kids .promo__container {
+  justify-content: center;
+}
 .promo__container {
   min-height: 100%;
   width: 100%;
@@ -1140,13 +1143,30 @@ body.lock {
 }
 .quests__header {
   position: relative;
-  background: url("../img/promo/quests.jpg") center/cover no-repeat;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
   padding: 7.5rem 0 1.25rem;
 }
 @media (min-width: 767.98px) {
   .quests__header {
     padding: 23.75rem 0 5rem;
   }
+}
+.quests__header.quests__header--center {
+  padding: 7.5rem 0 1.25rem;
+}
+@media (min-width: 767.98px) {
+  .quests__header.quests__header--center {
+    padding: 11.25rem 0 17.5rem;
+  }
+}
+.quests__header.quests__header--center .quests__filters {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding-bottom: 5rem;
 }
 .quests__header::before {
   content: "";
@@ -1221,13 +1241,15 @@ body.lock {
   }
 }
 .quests__body {
-  background: url("../img/decor-line-yellow.svg") 0 center/100% auto no-repeat;
   margin-top: 2.5rem;
 }
 @media (min-width: 575.98px) {
   .quests__body {
     margin-top: 0;
   }
+}
+.quests__body.quests__body--decor {
+  background: url("../img/decor-line-yellow.svg") 0 center/100% auto no-repeat;
 }
 .quests__list {
   display: grid;
@@ -1328,8 +1350,10 @@ body.lock {
 }
 .contacts__header {
   position: relative;
-  background: url("../img/contacts/contacts-bg.jpg") center/cover no-repeat;
   padding: 7.5rem 0 11.875rem;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 @media (min-width: 767.98px) {
   .contacts__header {
@@ -2151,4 +2175,54 @@ body.lock {
 }
 .rules__list li:not(:last-child) {
   margin-bottom: 1.5rem;
+}
+
+.policy {
+  background: url("../img/decor-line-mobile.svg") center -5rem/32.875rem auto no-repeat;
+  padding-top: calc(var(--header-height, 11.375rem) + 3.75rem);
+}
+@media (min-width: 767.98px) {
+  .policy {
+    padding-top: calc(var(--header-height, 11.375rem) + 5.5rem);
+    background: url("../img/decor-line.svg") 0 -17rem/100% auto no-repeat;
+  }
+}
+.policy h1 {
+  color: #fecd19;
+  text-align: center;
+  font-size: 1.5625rem;
+}
+@media (min-width: 575.98px) {
+  .policy h1 {
+    font-size: 2.5rem;
+  }
+}
+.policy p:not(:last-child) {
+  margin-bottom: 1.5rem;
+}
+.policy ul:not(:last-child) {
+  margin-bottom: 1.5rem;
+}
+.policy ul li:not(:last-child) {
+  margin-bottom: 1.5rem;
+}
+.policy h2 {
+  font-size: 1.125rem;
+  line-height: 140%;
+  font-family: "Inter";
+}
+.policy h2:not(:last-child) {
+  margin-bottom: 1.5rem;
+}
+.policy__body {
+  line-height: 140%;
+  margin-top: 1.88rem;
+  padding: 0 2.06rem;
+}
+@media (min-width: 767.98px) {
+  .policy__body {
+    margin-top: 3.75rem;
+    padding: 0;
+    font-size: 1.125rem;
+  }
 }

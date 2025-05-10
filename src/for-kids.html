@@ -1,24 +1,17 @@
 <!DOCTYPE html>
 <html lang="ru">
     @@include('html/_head.html', {
-    'title': 'Главная страница'
+    'title': 'Детские развлечения'
     })
     <body>
         <div class="wrapper">
             @@include('html/_header.html', {})
             <main class="page">
-                <section class="promo" style="background-image: url('@img/promo/home.jpg');">
+                <section class="promo promo--for-kids" style="background-image: url('@img/promo/for-kids.jpg');">
                     <div class="promo__container">
-                        <div class="promo__caption color-turquoise">OreSheK Club</div>
-                        <div class="promo__overlay">
-                            <img src="@img/promo/home-overlay.png" class="cover-image" alt="Промо изображение">
-                            <span class="promo__light">
-                                <img src="@img/promo/home-light.svg" class="cover-image" alt="Декор">
-                            </span>
-                        </div>
                         <div class="promo__main">
                             <h1 class="promo__title">
-                                Мир приключений и&nbsp;квестов. <br> Мытищи и&nbsp;Королёв
+                                <span class="color-accent">OreSheK Club</span> — волшебные эмоции для ваших детей
                             </h1>
                             <div class="promo__btns">
                                 <a href="#callback" data-fancybox class="promo__btn btn btn-primary">Забронировать</a>
@@ -30,12 +23,12 @@
                 <div class="services">
                     <div class="services__container container-sm">
                         <ul class="services__list">
-                            @@loop('./html/templates/_service.html', './html/json/_services-home.json')
+                            @@loop('./html/templates/_service.html', './html/json/_services-for-kids.json')
                         </ul>
                     </div>
                 </div>
-                @@include('html/_quests-type-1.html', {})
-                @@include('html/_contacts-type-1.html', {})
+                @@include('html/_quests-type-2.html', {})
+                @@include('html/_contacts-type-2.html', {})
             </main>
             @@include('html/_footer.html', {})
             @@include('html/_modal.html', {})

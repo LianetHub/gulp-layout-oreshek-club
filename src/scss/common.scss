@@ -189,6 +189,11 @@ body {
 			}
 		}
 	}
+	&.promo--for-kids {
+		.promo__container {
+			justify-content: center;
+		}
+	}
 	// .promo__container
 	&__container {
 		min-height: 100%;
@@ -431,10 +436,25 @@ body {
 	// .quests__header
 	&__header {
 		position: relative;
-		background: url("@img/promo/quests.jpg") center / cover no-repeat;
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-position: center;
 		padding: rem(120) 0 rem(20);
 		@media (min-width: $md4) {
 			padding: rem(380) 0 rem(80);
+		}
+		&.quests__header--center {
+			padding: rem(120) 0 rem(20);
+			@media (min-width: $md4) {
+				padding: rem(180) 0 rem(280);
+			}
+			.quests__filters {
+				position: absolute;
+				bottom: 0;
+				left: 0;
+				width: 100%;
+				padding-bottom: rem(80);
+			}
 		}
 		&::before {
 			content: "";
@@ -513,10 +533,12 @@ body {
 	}
 	// .quests__body
 	&__body {
-		background: url("@img/decor-line-yellow.svg") 0 center / 100% auto no-repeat;
 		margin-top: 2.5rem;
 		@media (min-width: $md5) {
 			margin-top: 0;
+		}
+		&.quests__body--decor {
+			background: url("@img/decor-line-yellow.svg") 0 center / 100% auto no-repeat;
 		}
 	}
 	// .quests__list
@@ -623,8 +645,10 @@ body {
 	}
 	&__header {
 		position: relative;
-		background: url("@img/contacts/contacts-bg.jpg") center / cover no-repeat;
 		padding: rem(120) 0 rem(190);
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-position: center;
 		@media (min-width: $md4) {
 			padding: rem(160) 0 rem(220);
 		}
