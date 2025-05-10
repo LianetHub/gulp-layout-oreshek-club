@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'icons';
-  src:  url('fonts/icons.eot?g5nk6u');
-  src:  url('fonts/icons.eot?g5nk6u#iefix') format('embedded-opentype'),
-    url('fonts/icons.ttf?g5nk6u') format('truetype'),
-    url('fonts/icons.woff?g5nk6u') format('woff'),
-    url('fonts/icons.svg?g5nk6u#icons') format('svg');
+  src:  url('fonts/icons.eot?3f0ado');
+  src:  url('fonts/icons.eot?3f0ado#iefix') format('embedded-opentype'),
+    url('fonts/icons.ttf?3f0ado') format('truetype'),
+    url('fonts/icons.woff?3f0ado') format('woff'),
+    url('fonts/icons.svg?3f0ado#icons') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -27,6 +27,9 @@
 
 .icon-close:before {
   content: "\e904";
+}
+.icon-check:before {
+  content: "\e905";
 }
 .icon-currency:before {
   content: "\e902";

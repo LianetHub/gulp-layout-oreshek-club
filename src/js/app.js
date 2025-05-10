@@ -1,12 +1,7 @@
 "use strict";
 
 
-import { Datepicker } from 'vanillajs-datepicker';
-import ru from 'vanillajs-datepicker/locales/ru';
 import * as devFunctions from "./modules/functions.js";
-
-
-Object.assign(Datepicker.locales, ru);
 
 
 //  init Fancybox
@@ -25,34 +20,6 @@ document.addEventListener("DOMContentLoaded", () => {
     devFunctions.mask();
     devFunctions.beforeSlider();
 
-    // select
-
-    const selects = document.querySelectorAll("select");
-
-    selects?.forEach(select => {
-        select.addEventListener("click", function () {
-            const parent = this.parentElement;
-            parent.classList.toggle("focus");
-        });
-
-        select.addEventListener("blur", function () {
-            this.parentElement.classList.remove("focus");
-        });
-    });
-
-
-    // datepickers
-
-    const datepickers = document.querySelectorAll('input[name="date"]');
-    datepickers?.forEach(datepicker => {
-
-        const datepickerInstanse = new Datepicker(datepicker, {
-            language: "ru",
-        });
-
-    })
-
-
 
 
     /* event handlers */
@@ -60,18 +27,16 @@ document.addEventListener("DOMContentLoaded", () => {
 
         const target = e.target;
 
-        // if (target.closest('.header__menu-toggler')) {
-        //     document.querySelector('.header')?.classList.add('open-menu')
-        // }
+        if (target.closest('.header__menu-toggler')) {
+            document.querySelector('.header')?.classList.add('open-menu');
+            document.body.classList.add('lock');
+        }
 
-        // if (target.closest('.menu__close')) {
-        //     document.querySelector('.header')?.classList.remove('open-menu')
-        // }
+        if (target.closest('.menu__close') || target.matches('.menu')) {
+            document.querySelector('.header')?.classList.remove('open-menu');
+            document.body.classList.remove('lock');
+        }
 
-        // if (target.matches('.menu__btn')) {
-        //     target.classList.toggle('active')
-        //     target.nextElementSibling?.classList.toggle('active')
-        // }
 
 
 
@@ -93,10 +58,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
 
-
-    Fancybox.show([{
-        src: "#callback"
-    }])
 
 
 

@@ -10,7 +10,7 @@
     {
         "url": "gunnars-hut.html",
         "images": "@img/quests/gunnars-hut.jpg",
-        "title": "Проклятая <span class='color-accent'>хижина&nbsp;Гуннара</span>",
+        "title": "Проклятая <span class='color-accent'>хижина Гуннара</span>",
         "description": "Верните Тору его молот и помогите богам Асгарда",
         "users": "2-6",
         "price": "6000 ₽"
@@ -26,7 +26,7 @@
     {
         "url": "musketeers.html",
         "images": "@img/quests/musketeers.jpg",
-        "title": "Мушкетеры в <span class='color-accent'>замке&nbsp;кардинала</span>",
+        "title": "Мушкетеры в <span class='color-accent'>замке кардинала</span>",
         "description": "Вы - смелые мушкетеры. Под страхом смерти проникаете в замок",
         "users": "2-8",
         "price": "6000 ₽"

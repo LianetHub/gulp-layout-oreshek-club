@@ -50,17 +50,59 @@
                             <a href="/" class="header__logo">
                                 <img src="img/logo.svg" alt="Логотип">
                             </a>
-                            <nav aria-label="Меню" class="menu__body">
-                                <ul class="menu__list">
-                                    <li class="menu__item"><a href="" class="menu__link">Квесты</a></li>
-                                    <li class="menu__item"><a href="" class="menu__link">Игры с ведущим</a></li>
-                                    <li class="menu__item"><a href="" class="menu__link">Детям</a></li>
-                                    <li class="menu__item"><a href="" class="menu__link">Корпоративы</a></li>
+                            <nav aria-label="Меню" class="header__menu">
+                                <ul class="header__menu-list">
+                                    <li class="header__menu-item"><a href="" class="header__menu-link">Квесты</a></li>
+                                    <li class="header__menu-item"><a href="" class="header__menu-link">Игры с ведущим</a></li>
+                                    <li class="header__menu-item"><a href="" class="header__menu-link">Детям</a></li>
+                                    <li class="header__menu-item"><a href="" class="header__menu-link">Корпоративы</a></li>
                                 </ul>
                             </nav>
                             <button type="button" class="header__menu-toggler">
                                 Меню
                             </button>
+                            <div class="menu">
+                                <div class="menu__body">
+                                    <button type="button" aria-label="Закрыть меню" class="menu__close icon-close"></button>
+                                    <nav aria-label="Меню услуг" class="menu__content">
+                                        <div class="menu__content-block">
+                                            <div class="menu__caption">OreSheK Club</div>
+                                            <ul class="menu__list">
+                                                <li><a href="">Антикафе</a></li>
+                                                <li><a href="">Акции и подарки</a></li>
+                                                <li><a href="">Правила</a></li>
+                                                <li><a href="">О нас</a></li>
+                                                <li><a href="">Контакты</a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="menu__content-block">
+                                            <div class="menu__caption">Услуги</div>
+                                            <ul class="menu__list">
+                                                <li><a href="">Квесты</a></li>
+                                                <li><a href="">Игры с ведущим</a></li>
+                                                <li><a href="">Детские праздники</a></li>
+                                                <li><a href="">Корпоративы</a></li>
+                                                <li><a href="">День рождения</a></li>
+                                                <li><a href="">Выпускной</a></li>
+                                            </ul>
+                                        </div>
+                                    </nav>
+                                    <div class="menu__contacts">
+                                        <div class="menu__contacts-block">
+                                            <a href="tel:89775526013" class="menu__contacts-phone">8 (977) 552-60-13</a>
+                                            <div class="menu__contacts-location">г. Мытищи</div>
+                                        </div>
+                                        <div class="menu__contacts-block">
+                                            <a href="tel:89776252598" class="menu__contacts-phone">8 (977) 625-25-98</a>
+                                            <div class="menu__contacts-location">г. Королев</div>
+                                        </div>
+                                        <div class="menu__contacts-socials">
+                                            <a href="" class="menu__contacts-social icon-instagram"></a>
+                                            <a href="" class="menu__contacts-social icon-vk"></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -74,10 +116,10 @@
                         </div>
                         <div class="promo__main">
                             <h1 class="promo__title">
-                                Мир приключений и квестов. Мытищи и Королёв
+                                Мир приключений и&nbsp;квестов. <br> Мытищи и&nbsp;Королёв
                             </h1>
                             <div class="promo__btns">
-                                <a href="" class="promo__btn btn btn-primary">Забронировать</a>
+                                <a href="#callback" data-fancybox class="promo__btn btn btn-primary">Забронировать</a>
                                 <a href="" class="promo__btn btn btn-secondary">Расписание</a>
                             </div>
                         </div>
@@ -92,7 +134,7 @@
                                         <img src="img/services/roots.jpg" class="cover-image" alt="Постер услуги">
                                     </span>
                                     <span class="service-card__title h3 color-accent">Квесты</span>
-                                    <span class="service-card__description text-block">Вас ждут невероятные приключения! <br> Мы организуем для вас незабываемый праздник, День Рождения, корпоратив, или выпускной на любой вкус и возраст!</span>
+                                    <span class="service-card__description text-block">Вас ждут невероятные приключения! <br> Мы организуем для вас незабываемый праздник, День Рождения, корпоратив, или&nbsp;выпускной на любой вкус и возраст!</span>
                                 </a>
                             </li><li class="services__item">
                                 <a href="corporate.html" class="service-card">
@@ -177,7 +219,7 @@
                                             <img src="img/quests/gunnars-hut.jpg" class="cover-image" alt="Постер квеста">
                                         </span>
                                         <span class="quests-card__body">
-                                            <span class="quests-card__title h3">Проклятая <span class='color-accent'>хижина&nbsp;Гуннара</span></span>
+                                            <span class="quests-card__title h3">Проклятая <span class='color-accent'>хижина Гуннара</span></span>
                                             <span class="quests-card__description text-block">Верните Тору его молот и помогите богам Асгарда</span>
                                             <span class="quests-card__stats">
                                                 <span class="quests-card__stats-block icon-users">2-6</span>
@@ -205,7 +247,7 @@
                                             <img src="img/quests/musketeers.jpg" class="cover-image" alt="Постер квеста">
                                         </span>
                                         <span class="quests-card__body">
-                                            <span class="quests-card__title h3">Мушкетеры в <span class='color-accent'>замке&nbsp;кардинала</span></span>
+                                            <span class="quests-card__title h3">Мушкетеры в <span class='color-accent'>замке кардинала</span></span>
                                             <span class="quests-card__description text-block">Вы - смелые мушкетеры. Под страхом смерти проникаете в замок</span>
                                             <span class="quests-card__stats">
                                                 <span class="quests-card__stats-block icon-users">2-8</span>
@@ -247,35 +289,41 @@
                     </div>
                 </section>
                 <section class="contacts">
-                    <div class="contacts__container container-sm">
-                        <div class="contacts__heading">
-                            <h2 class="contacts__title"><span>К</span>онтакты</h2>
+                    <div class="contacts__header">
+                        <div class="contacts__container container-sm">
+                            <div class="contacts__heading">
+                                <h2 class="contacts__title"><span>К</span>онтакты</h2>
+                            </div>
+                            <div class="contacts__overlay">
+                                <img src="img/contacts/contacts-overlay.png" class="cover-image" alt="Изображение ">
+                            </div>
                         </div>
-                        <div class="contacts__overlay">
-                            <img src="img/contacts/contacts-overlay.png" class="cover-image" alt="Изображение ">
+                    </div>
+                    <div class="contacts__body">
+                        <div class="contacts__container container-sm">
+                            <ul class="contacts__items">
+                                <li class="contacts__item">
+                                    <div class="contacts__item-caption h3">пишите</div>
+                                    <a href="mailto:oreshekclub@yandex.ru" class="contacts__item-link text-block">oreshekclub@yandex.ru</a>
+                                </li>
+                                <li class="contacts__item">
+                                    <div class="contacts__item-caption h3">Приезжайте</div>
+                                    <address class="contacts__item-address text-block">г. Мытищи, Проектируемый проезд 497, владение 1, строение 5</address>
+                                    <address class="contacts__item-address text-block">г. Королёв, ул. Ленина 27, пом. 1</address>
+                                </li>
+                                <li class="contacts__item">
+                                    <div class="contacts__item-caption h3">Позвоните</div>
+                                    <div class="contacts__item-block">
+                                        <a href="tel:89775526013" class="contacts__item-phone">8 (977) 552-60-13</a>
+                                        <div class="contacts__item-place">Мытищи</div>
+                                    </div>
+                                    <div class="contacts__item-block">
+                                        <a href="tel:89776252598" class="contacts__item-phone">8 (977) 625-25-98</a>
+                                        <div class="contacts__item-place">г. Королёв</div>
+                                    </div>
+                                </li>
+                            </ul>
                         </div>
-                        <ul class="contacts__items">
-                            <li class="contacts__item">
-                                <div class="contacts__item-caption h3">пишите</div>
-                                <a href="mailto:oreshekclub@yandex.ru" class="contacts__item-link">oreshekclub@yandex.ru</a>
-                            </li>
-                            <li class="contacts__item">
-                                <div class="contacts__item-caption h3">Приезжайте</div>
-                                <address class="contacts__item-address text-block">г. Мытищи, Проектируемый проезд 497, владение 1, строение 5</address>
-                                <address class="contacts__item-address text-block">г. Королёв, ул. Ленина 27, пом. 1</address>
-                            </li>
-                            <li class="contacts__item">
-                                <div class="contacts__item-caption h3">Позвоните</div>
-                                <div class="contacts__item-block">
-                                    <a href="tel:89775526013" class="contacts__item-phone">8 (977) 552-60-13</a>
-                                    <div class="contacts__item-place">Мытищи</div>
-                                </div>
-                                <div class="contacts__item-block">
-                                    <a href="tel:89776252598" class="contacts__item-phone">8 (977) 625-25-98</a>
-                                    <div class="contacts__item-place">г. Королёв</div>
-                                </div>
-                            </li>
-                        </ul>
                     </div>
                 </section>
             </main>
@@ -335,15 +383,16 @@
             <div id="callback" class="popup">
                 <button type="button" data-fancybox-close class="popup__close icon-close"></button>
                 <h2 class="popup__title">Остались вопросы?</h2>
-                <p></p>
+                <p class="popup__subtitle text-block-lg">Заполните форму, мы перезвоним и&nbsp;проконсультируем</p>
                 <form action="#" class="popup__form form">
-                    <input type="text" name="name" id="callback-name" class="form__control" placeholder="Ваше имя">
-                    <input type="tel" name="phone" id="callback-phone" class="form__control" placeholder="+7 ___ ___-__-__">
+                    <input type="text" name="name" class="form__control" placeholder="Имя">
+                    <input type="tel" name="phone" class="form__control" placeholder="8-999-999-99-99">
+                    <input type="email" name="email" class="form__control" placeholder="email@ru.ru">
                     <label class="form__checkbox">
                         <input type="checkbox" name="agree" class="form__checkbox-input hidden" hidden>
-                        <span class="form__checkbox-text">Я согласен на&nbsp;обработку персональных данных в соответствии с&nbsp;<a href="">политика конфинденциальности</a></span>
+                        <span class="form__checkbox-text">Я соглашаюсь с <a href="privacy.html" target="_blank">политикой конфиденциальности</a></span>
                     </label>
-                    <button type="submit" class="btn btn-primary btn-fullwidth btn-xl">Записаться</button>
+                    <button type="submit" class="form__btn btn btn-secondary">Оставить запрос</button>
                 </form>
             </div>
             <!-- plugins -->
