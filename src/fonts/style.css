@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'icons';
-  src:  url('fonts/icons.eot?3f0ado');
-  src:  url('fonts/icons.eot?3f0ado#iefix') format('embedded-opentype'),
-    url('fonts/icons.ttf?3f0ado') format('truetype'),
-    url('fonts/icons.woff?3f0ado') format('woff'),
-    url('fonts/icons.svg?3f0ado#icons') format('svg');
+  src:  url('fonts/icons.eot?170e97');
+  src:  url('fonts/icons.eot?170e97#iefix') format('embedded-opentype'),
+    url('fonts/icons.ttf?170e97') format('truetype'),
+    url('fonts/icons.woff?170e97') format('woff'),
+    url('fonts/icons.svg?170e97#icons') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -25,8 +25,14 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-chat:before {
+  content: "\e906";
+}
 .icon-close:before {
   content: "\e904";
+}
+.icon-phone:before {
+  content: "\e907";
 }
 .icon-check:before {
   content: "\e905";

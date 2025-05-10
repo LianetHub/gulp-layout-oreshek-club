@@ -37,6 +37,10 @@ document.addEventListener("DOMContentLoaded", () => {
             document.body.classList.remove('lock');
         }
 
+        if (target.matches('.widget__toggler')) {
+            document.querySelector('.widget')?.classList.toggle('active')
+        }
+
 
 
 
@@ -117,6 +121,23 @@ document.addEventListener("DOMContentLoaded", () => {
     const headerObserver = new IntersectionObserver(callback);
     headerObserver.observe(headerElement);
 
+
+    // widget animation
+
+    const widget = document.querySelector('.widget');
+    if (widget) {
+        function toggleWidgetVisibility() {
+            if (window.scrollY > window.innerHeight) {
+                widget.classList.add('visible');
+            } else {
+                widget.classList.remove('visible');
+            }
+        }
+
+        window.addEventListener('scroll', toggleWidgetVisibility);
+
+        toggleWidgetVisibility()
+    }
 
 
 

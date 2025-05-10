@@ -1,0 +1,28 @@
+.rules {
+	padding: 0 0 10rem;
+	margin-top: -11.5rem;
+	@media (min-width: $md4) {
+		margin-top: -14rem;
+	}
+	// .rules__container
+	&__container {
+	}
+	// .rules__list
+	&__list {
+		padding-left: 1em;
+		list-style: disc;
+		@media (min-width: $md4) {
+			columns: 2;
+			column-gap: 2.5rem;
+		}
+		@media (min-width: $md3) {
+			column-gap: 5rem;
+		}
+		& li {
+			break-inside: avoid;
+			&:not(:last-child) {
+				margin-bottom: 1.5rem;
+			}
+		}
+	}
+}

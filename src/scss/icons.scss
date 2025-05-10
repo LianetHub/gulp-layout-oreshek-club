@@ -17,9 +17,14 @@
 		display: block;
 	}
 }
-
+.icon-chat:before {
+	content: "\e906";
+}
 .icon-close:before {
 	content: "\e904";
+}
+.icon-phone:before {
+	content: "\e907";
 }
 .icon-check:before {
 	content: "\e905";

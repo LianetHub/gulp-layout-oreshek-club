@@ -74,13 +74,20 @@ body {
 	padding-bottom: 2.43rem;
 	&:not(:last-child) {
 		margin-bottom: 4.25rem;
+		& + * {
+			position: relative;
+			z-index: 2;
+		}
 	}
 	@media (min-width: $md4) {
 		padding-bottom: rem(147);
 		min-height: rem(882);
-		// min-height: 100vh;
 		&:not(:last-child) {
 			margin-bottom: 9.5rem;
+			& + * {
+				position: relative;
+				z-index: 2;
+			}
 		}
 	}
 	&::before {
@@ -138,9 +145,51 @@ body {
 			}
 		}
 	}
+	&.promo--rules {
+		min-height: rem(505);
+		@media (min-width: $md3) {
+			min-height: rem(882);
+		}
+		&::after {
+			bottom: 30%;
+			@media (min-width: $md4) {
+				bottom: 0%;
+			}
+		}
+		&::before {
+			@media (min-width: $md4) {
+				bottom: -14rem;
+			}
+			@media (min-width: $md3) {
+				bottom: -5rem;
+			}
+		}
+		.promo__container {
+			justify-content: center;
+			&::before {
+				content: "";
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 8rem;
+				background: linear-gradient(to bottom, $black 20%, transparent) 0 0 / 100% 100% no-repeat;
+				z-index: 3;
+				pointer-events: none;
+			}
+		}
+		.promo__caption {
+			margin-top: 2.75rem;
+			@media (min-width: $md3) {
+				margin-top: 8rem;
+			}
+			font-size: clamp(4.64763rem, 13.75vw, 15rem);
+		}
+	}
 	// .promo__container
 	&__container {
 		min-height: 100%;
+		width: 100%;
 		flex: 1 1 auto;
 		display: flex;
 		flex-direction: column;
@@ -154,13 +203,15 @@ body {
 		white-space: nowrap;
 		line-height: 100%;
 		text-transform: uppercase;
-		opacity: 0.33;
 		position: absolute;
 		top: $header;
 		margin-top: 0.45rem;
 		left: 0;
 		right: 0;
 		z-index: 1;
+		&.color-turquoise {
+			opacity: 0.33;
+		}
 	}
 	// .promo__overlay
 	&__overlay {
@@ -170,13 +221,17 @@ body {
 		width: 100%;
 		height: 100%;
 		z-index: 2;
-		& img {
-			object-fit: cover;
-			width: 100%;
-			height: 100%;
-		}
+		pointer-events: none;
 	}
-
+	&__light {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		pointer-events: none;
+		animation: blink 1s infinite ease-in-out;
+	}
 	// .promo__main
 	&__main {
 		display: flex;
