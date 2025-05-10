@@ -1,0 +1,35 @@
+<div id="booking" class="popup">
+    <button type="button" data-fancybox-close class="popup__close icon-close"></button>
+    <h2 class="popup__title">Бронирование квеста</h2>
+    <form action="#" class="popup__form form">
+        <input type="text" name="quest" class="form__control quest-name" readonly value="">
+        <input type="text" name="date" class="form__control quest-date" readonly value="">
+        <input type="text" name="name" class="form__control" placeholder="Имя">
+        <input type="tel" name="phone" class="form__control" placeholder="8-999-999-99-99">
+        <input type="email" name="email" class="form__control" placeholder="email@ru.ru">
+        <div class="form__select">
+            <select name="count-players">
+                <option value="2-4 игрока">2-4 игрока</option>
+                <option value="5 игроков">5 игроков</option>
+                <option value="6 игроков">6 игроков</option>
+                <option value="7 игроков">7 игроков</option>
+                <option value="8 игроков">8 игроков</option>
+            </select>
+        </div>
+        <div class="form__select">
+            <select name="payment">
+                <option value="Выберите способ оплаты">Выберите способ оплаты</option>
+                <option value="Оплата наличными">Оплата наличными</option>
+                <option value="Картой">Картой</option>
+            </select>
+        </div>
+        <div class="form__price ">
+            Цена: <span class="form__price-value quest-price"></span>
+        </div>
+        <label class="form__checkbox">
+            <input type="checkbox" name="agree" class="form__checkbox-input hidden" hidden>
+            <span class="form__checkbox-text">Я соглашаюсь с условиями <a href="oferta.html" target="_blank">публичной оферты</a></span>
+        </label>
+        <button type="submit" class="form__btn btn btn-primary">Забронировать</button>
+    </form>
+</div>

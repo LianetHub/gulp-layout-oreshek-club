@@ -21,6 +21,17 @@ document.addEventListener("DOMContentLoaded", () => {
     devFunctions.beforeSlider();
 
 
+    document.querySelectorAll("select")?.forEach(select => {
+        select.addEventListener("click", function () {
+            const parent = this.parentElement;
+            parent.classList.toggle("focus");
+        });
+
+        select.addEventListener("blur", function () {
+            this.parentElement.classList.remove("focus");
+        });
+    });
+
 
     /* event handlers */
     document.addEventListener("click", (e) => {
@@ -62,11 +73,55 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
 
+    Fancybox.bind('[data-fancybox]', {
+        on: {
+            ready: (fancybox) => {
+                const trigger = fancybox.options.triggerEl;
+
+                if (trigger && trigger.classList.contains('booking__time')) {
 
 
+                    const datetime = trigger.dataset.datetime;
+                    const price = trigger.dataset.price;
+                    const title = trigger.dataset.title;
+
+                    const popup = document.getElementById('booking');
+
+                    if (popup) {
+                        const dateInput = popup.querySelector('.quest-date');
+                        const priceEl = popup.querySelector('.quest-price');
+                        const titleInput = popup.querySelector('.quest-name');
+
+                        const [datePart, timePart] = datetime.split('T');
+                        const [year, month, day] = datePart.split('-');
+
+                        const monthsRu = [
+                            'января', 'февраля', 'марта', 'апреля', 'мая', 'июня',
+                            'июля', 'августа', 'сентября', 'октября', 'ноября', 'декабря'
+                        ];
+
+                        const formattedDate = `${parseInt(day)} ${monthsRu[parseInt(month) - 1]} ${year}, ${timePart}`;
+
+
+                        if (dateInput) dateInput.value = formattedDate;
+                        if (priceEl) priceEl.textContent = `${price} руб.`;
+                        if (titleInput) titleInput.value = title;
+                    }
+                }
+            }
+        }
+    });
 
 
     // sliders
+
+
+    if (document.querySelector('.description__gallery')) {
+        getMobileSlider('.description__gallery', {
+            spaceBetween: 15,
+            slidesPerView: 1.1
+        })
+    }
 
 
     function getMobileSlider(sliderName, options) {

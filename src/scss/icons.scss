@@ -17,11 +17,21 @@
 		display: block;
 	}
 }
+
+.icon-down:before {
+	content: "\e908";
+}
 .icon-chat:before {
 	content: "\e906";
 }
 .icon-close:before {
 	content: "\e904";
+}
+.icon-time:before {
+	content: "\e909";
+}
+.icon-criminal:before {
+	content: "\e90a";
 }
 .icon-phone:before {
 	content: "\e907";

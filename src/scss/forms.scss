@@ -112,6 +112,56 @@
 	&__btn {
 		margin-top: 0.5rem;
 	}
+	// .form__select
+	&__select {
+		position: relative;
+		&.focus {
+			&::before {
+				transform: translateY(-50%) rotate(180deg);
+			}
+			select {
+				border-color: $yellow;
+			}
+		}
+
+		&::before {
+			@extend %ic, .icon-down;
+			position: absolute;
+			top: 50%;
+			right: 1rem;
+			font-size: 1.5rem;
+			color: currentColor;
+			transform: translateY(-50%);
+			transition: transform 0.3s ease;
+		}
+		& select {
+			appearance: none;
+			background: transparent;
+			border: rem(1) solid $white;
+			background: $black;
+			border-radius: rem(6);
+			color: $white;
+			display: block;
+			font-size: 1rem;
+			line-height: 150%;
+			padding: 1.15rem 1.25rem;
+			outline: none;
+			width: 100%;
+		}
+	}
+	// .form__select-icon
+	&__select-icon {
+	}
+	// .form__price
+	&__price {
+		font-size: 1.25rem;
+	}
+	// .form__price-value
+	&__price-value {
+		color: $yellow;
+		font-weight: 700;
+		font-size: 1.5rem;
+	}
 }
 
 .btn {

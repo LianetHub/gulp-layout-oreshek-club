@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ru">
+    @@include('html/_head.html', {
+    'title': 'Полтергейст'
+    })
+    <body>
+        <div class="wrapper">
+            @@include('html/_header.html', {})
+            <main class="page">
+                <section class="promo promo--quest" style="background-image: url('@img/promo/poltergeist.jpg');">
+                    <div class="promo__container container-sm">
+                        <div class="promo__offer">
+                            <h1 class="promo__offer-title h3">
+                                <span class="color-accent">Мистическая история</span>
+                                для&nbsp;совсем бесстрашных
+                            </h1>
+                            <div class="promo__offer-subtitle text-block">Прохождение с ведущим c 14 лет</div>
+                            <div class="promo__offer-stats text-block">
+                                <div class="promo__offer-stat icon-users">2-6</div>
+                                <div class="promo__offer-stat icon-currency">6000 ₽</div>
+                                <div class="promo__offer-stat icon-criminal">от 16</div>
+                                <div class="promo__offer-stat icon-time">60 мин</div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="description">
+                    <div class="description__container container-sm">
+                        <h2 class="description__title">Полтергейст</h2>
+                        <div class="description__body text-block-lg">
+                            <p>Вы - команда экстрасенсов. Ваша задача – расследовать таинственное исчезновение трех девушек, снимавших вместе квартиру, и справиться с древним злом, живущим в ней…</p>
+                            <p>Ни низкая стоимость аренды, ни странный внешний вид хозяина не насторожили трех бедных студенток, для которых эта таинственная квартира на последнем этаже старинного дома и стала последним пристанищем. Девушки исчезли бесследно, а вместе с ними и подозрительный владелец. Расследовать происшествие отправляетесь вы - группа опытных экстрасенсов. Сразу становится ясно, что в квартире обитают призраки трех девушек, а компанию им составляет древняя нематериальная сущность. Монстр питается их энергией! У вас лишь час, чтобы найти в доме артефакт, который сможет усмирить разбуянившегося духа.</p>
+                        </div>
+                        <div class="description__gallery swiper">
+                            <div class="swiper-wrapper">
+                                <a href="@img/poltergeist/01.png" data-fancybox="quset-gallery" class="description__gallery-item swiper-slide">
+                                    <img src="@img/poltergeist/01.png" class="cover-image" alt="Фото галлереи">
+                                </a>
+                                <a href="@img/poltergeist/02.png" data-fancybox="quset-gallery" class="description__gallery-item swiper-slide">
+                                    <img src="@img/poltergeist/02.png" class="cover-image" alt="Фото галлереи">
+                                </a>
+                                <a href="@img/poltergeist/03.png" data-fancybox="quset-gallery" class="description__gallery-item swiper-slide">
+                                    <img src="@img/poltergeist/03.png" class="cover-image" alt="Фото галлереи">
+                                </a>
+                                <a href="@img/poltergeist/04.png" data-fancybox="quset-gallery" class="description__gallery-item swiper-slide">
+                                    <img src="@img/poltergeist/04.png" class="cover-image" alt="Фото галлереи">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="banner">
+                    <div class="banner__body">
+                        <div class="banner__container">
+                            <h2 class="banner__title">
+                                <span class="color-accent">Команда экстрасенсов</span> раскрывает тайну зловещей квартиры
+                            </h2>
+                        </div>
+                    </div>
+                    <div class="banner__image">
+                        <img src="@img/banners/poltergeist.jpg" class="cover-image" alt="Баннер">
+                    </div>
+                </section>
+                @@include('html/_booking.html', {
+                "title": "Полтергейст"
+                })
+                @@include('html/_quests.html', {})
+                @@include('html/_contacts-type-1.html', {})
+            </main>
+            @@include('html/_footer.html', {})
+            @@include('html/_modal.html', {})
+            @@include('html/_modal-booking.html', {})
+            @@include('html/_js.html', {})
+        </div>
+    </body>
+</html>
