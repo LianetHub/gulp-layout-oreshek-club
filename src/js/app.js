@@ -90,23 +90,31 @@ document.addEventListener("DOMContentLoaded", () => {
             document.querySelector('.widget')?.classList.toggle('active')
         }
 
+        if (target.matches('.booking__filters-btn')) {
+            document.querySelectorAll('.booking__filters-btn')?.forEach(bookingFilterBtn => {
+                bookingFilterBtn.classList.remove('active');
+            })
+            target.classList.add('active');
+            document.querySelectorAll('[data-title]')?.forEach(titleBlock => {
+                titleBlock.dataset.title = target.textContent;
+            })
+
+            const spollerBtn = document.querySelector('.booking__spoller');
+            if (spollerBtn) {
+                spollerBtn.textContent = target.textContent;
+                if (spollerBtn.classList.contains('active')) {
+                    document.querySelector('.booking__filters-btns')?.slideUp()
+                }
+                spollerBtn?.classList.remove('active');
+            }
+        }
+
+        if (target.matches('.booking__spoller')) {
+            target.classList.toggle('active');
+            target.nextElementSibling.slideToggle()
+        }
 
 
-
-        // if (target.matches('.services__tabs-btn')) {
-        //     const tabsContainer = target.closest('.services__tabs');
-        //     const tabs = tabsContainer.querySelectorAll('.services__tabs-btn');
-        //     const contents = document.querySelectorAll('.services__tabs-item');
-
-        //     const tabIndex = [...tabs].indexOf(target);
-
-        //     tabs.forEach(tab => tab.classList.remove('active'));
-        //     target.classList.add('active');
-
-        //     contents.forEach((content, index) => {
-        //         content.classList.toggle('active', index === tabIndex);
-        //     });
-        // }
 
     });
 
@@ -201,3 +209,77 @@ document.addEventListener("DOMContentLoaded", () => {
 
 });
 
+HTMLElement.prototype.slideToggle = function (duration, callback) {
+    if (this.clientHeight === 0) {
+        _s(this, duration, callback, true);
+    } else {
+        _s(this, duration, callback);
+    }
+};
+
+HTMLElement.prototype.slideUp = function (duration, callback) {
+    _s(this, duration, callback);
+};
+
+HTMLElement.prototype.slideDown = function (duration, callback) {
+    _s(this, duration, callback, true);
+};
+
+function _s(el, duration, callback, isDown) {
+    if (typeof duration === 'undefined') duration = 400;
+    if (typeof isDown === 'undefined') isDown = false;
+
+    el.style.overflow = "hidden";
+    if (isDown) el.style.display = "block";
+
+    const elStyles = window.getComputedStyle(el);
+
+    const elHeight = parseFloat(elStyles.getPropertyValue('height'));
+    const elPaddingTop = parseFloat(elStyles.getPropertyValue('padding-top'));
+    const elPaddingBottom = parseFloat(elStyles.getPropertyValue('padding-bottom'));
+    const elMarginTop = parseFloat(elStyles.getPropertyValue('margin-top'));
+    const elMarginBottom = parseFloat(elStyles.getPropertyValue('margin-bottom'));
+
+    const stepHeight = elHeight / duration;
+    const stepPaddingTop = elPaddingTop / duration;
+    const stepPaddingBottom = elPaddingBottom / duration;
+    const stepMarginTop = elMarginTop / duration;
+    const stepMarginBottom = elMarginBottom / duration;
+
+    let start;
+
+    function step(timestamp) {
+        if (start === undefined) start = timestamp;
+
+        const elapsed = timestamp - start;
+
+        if (isDown) {
+            el.style.height = `${stepHeight * elapsed}px`;
+            el.style.paddingTop = `${stepPaddingTop * elapsed}px`;
+            el.style.paddingBottom = `${stepPaddingBottom * elapsed}px`;
+            el.style.marginTop = `${stepMarginTop * elapsed}px`;
+            el.style.marginBottom = `${stepMarginBottom * elapsed}px`;
+        } else {
+            el.style.height = `${elHeight - stepHeight * elapsed}px`;
+            el.style.paddingTop = `${elPaddingTop - stepPaddingTop * elapsed}px`;
+            el.style.paddingBottom = `${elPaddingBottom - stepPaddingBottom * elapsed}px`;
+            el.style.marginTop = `${elMarginTop - stepMarginTop * elapsed}px`;
+            el.style.marginBottom = `${elMarginBottom - stepMarginBottom * elapsed}px`;
+        }
+
+        if (elapsed >= duration) {
+            el.style.height = "";
+            el.style.paddingTop = "";
+            el.style.paddingBottom = "";
+            el.style.marginTop = "";
+            el.style.marginBottom = "";
+            el.style.overflow = "";
+            if (!isDown) el.style.display = "none";
+            if (typeof callback === "function") callback();
+        } else {
+            window.requestAnimationFrame(step);
+        }
+    }
+
+    window.requestAnimationFrame(step);
+}

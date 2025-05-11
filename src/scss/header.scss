@@ -38,8 +38,13 @@
 	// .header__logo
 	&__logo {
 		max-width: 3.8125rem;
+
 		@media (min-width: $md4) {
 			max-width: 5rem;
+		}
+		width: 100%;
+		& img {
+			width: 100%;
 		}
 	}
 	// .header__menu

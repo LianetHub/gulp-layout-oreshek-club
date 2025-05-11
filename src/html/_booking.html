@@ -1,5 +1,18 @@
 <section class="booking">
     <div class="booking__container container-sm">
+        @@if(typeof hasFilters !== 'undefined' && hasFilters === true) {
+        <div class="booking__filters">
+            <button type="button" class="booking__spoller">Проклятая хижина Гуннара</button>
+            <div class="booking__filters-btns">
+                <button type="button" class="booking__filters-btn active">Проклятая хижина Гуннара</button>
+                <button type="button" class="booking__filters-btn">Баба-Яга</button>
+                <button type="button" class="booking__filters-btn">Логово мафии</button>
+                <button type="button" class="booking__filters-btn">Мушкетеры в замке карлинала</button>
+                <button type="button" class="booking__filters-btn">Дом Ведьмы</button>
+                <button type="button" class="booking__filters-btn">Полтергейст</button>
+            </div>
+        </div>
+        }
         <h2 class="booking__title">
             Онлайн бронирование
         </h2>

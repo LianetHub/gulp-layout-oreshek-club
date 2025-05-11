@@ -1,3 +1,10 @@
+html {
+	font-size: 16px;
+	@media (min-width: 2559.98px) {
+		font-size: vw(16);
+	}
+}
+
 body {
 	font-family: $fontfamily, sans-serif;
 	font-size: 1rem;
@@ -20,7 +27,6 @@ body {
 	min-height: 100%;
 	display: flex;
 	flex-direction: column;
-	max-width: 2560px;
 	margin: 0 auto;
 }
 
@@ -192,6 +198,30 @@ body {
 	&.promo--for-kids {
 		.promo__container {
 			justify-content: center;
+		}
+	}
+	&.promo--schedule {
+		min-height: rem(280);
+		@media (min-width: $md4) {
+			min-height: rem(882);
+		}
+		.promo__caption {
+			margin-top: 0;
+			font-size: clamp(3.1755rem, 11vw, 15rem);
+			@media (min-width: $md4) {
+				margin-top: 4rem;
+			}
+		}
+		&::after {
+			bottom: -2.5rem;
+			@media (max-width: $md4) {
+				display: none;
+			}
+		}
+		&::before {
+			@media (max-width: $md4) {
+				height: 4rem;
+			}
 		}
 	}
 	// .promo__container
@@ -436,6 +466,7 @@ body {
 	// .quests__header
 	&__header {
 		position: relative;
+		z-index: 1;
 		background-size: cover;
 		background-repeat: no-repeat;
 		background-position: center;
