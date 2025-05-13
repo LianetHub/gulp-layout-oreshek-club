@@ -68,7 +68,7 @@
                                         <div class="menu__content-block">
                                             <div class="menu__caption">OreSheK Club</div>
                                             <ul class="menu__list">
-                                                <li><a href="">Антикафе</a></li>
+                                                <li><a href="anti-cafe.html">Антикафе</a></li>
                                                 <li><a href="">Акции и подарки</a></li>
                                                 <li><a href="rules.html">Правила</a></li>
                                                 <li><a href="">О нас</a></li>
@@ -82,7 +82,7 @@
                                                 <li><a href="">Игры с ведущим</a></li>
                                                 <li><a href="for-kids.html">Детские праздники</a></li>
                                                 <li><a href="">Корпоративы</a></li>
-                                                <li><a href="">День рождения</a></li>
+                                                <li><a href="birthday.html">День рождения</a></li>
                                                 <li><a href="">Выпускной</a></li>
                                             </ul>
                                         </div>
@@ -108,22 +108,35 @@
                 </div>
             </header>
             <main class="page">
-                <section class="promo" style="background-image: url('img/promo/home.jpg');">
+                <section class="promo promo--birthday" style="background-image: url('img/promo/birthday.jpg');">
                     <div class="promo__container">
-                        <div class="promo__caption color-turquoise">OreSheK Club</div>
-                        <div class="promo__overlay">
-                            <img src="img/promo/home-overlay.png" class="cover-image" alt="Промо изображение">
-                            <span class="promo__light">
-                                <img src="img/promo/home-light.svg" class="cover-image" alt="Декор">
-                            </span>
-                        </div>
+                        <span class="promo__light">
+                            <img src="img/promo/birthday-light.svg" class="cover-image" alt="Декор">
+                        </span>
                         <div class="promo__main">
                             <h1 class="promo__title">
-                                Мир приключений и&nbsp;квестов. <br> Мытищи и&nbsp;Королёв
+                                <span class="color-accent">OreSheK Club</span> — ваш лучший день рождения
                             </h1>
                             <div class="promo__btns">
-                                <a href="#callback" data-fancybox class="promo__btn btn btn-primary">Забронировать</a>
-                                <a href="schedule.html" class="promo__btn btn btn-secondary">Расписание</a>
+                                <a href="#callback" data-fancybox class="promo__btn btn btn-primary">Заказать праздник</a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="videos">
+                    <div class="videos__container container-sm">
+                        <h2 class="videos__title">Мини-ролики о праздниках: <span class="color-accent">вспоминаем яркие моменты!</span></h2>
+                        <div data-fancybox data-type="iframe" class="videos__slider swiper">
+                            <div class="swiper-wrapper">
+                                <a href="https://rutube.ru/play/embed/bb9676d1d2c1088ea9a72040beb9a7b0" data-fancybox data-type="iframe" class="videos__slide swiper-slide icon-play">
+                                    <img src="img/video-poster.jpg" class="cover-image" alt="Постер">
+                                </a>
+                                <a href="https://rutube.ru/play/embed/bb9676d1d2c1088ea9a72040beb9a7b0" data-fancybox data-type="iframe" class="videos__slide swiper-slide icon-play">
+                                    <img src="img/video-poster.jpg" class="cover-image" alt="Постер">
+                                </a>
+                                <a href="https://rutube.ru/play/embed/bb9676d1d2c1088ea9a72040beb9a7b0" data-fancybox data-type="iframe" class="videos__slide swiper-slide icon-play">
+                                    <img src="img/video-poster.jpg" class="cover-image" alt="Постер">
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -184,7 +197,7 @@
                     </div>
                 </div>
                 <section class="quests">
-                    <div class="quests__header" style="background-image: url('img/promo/quests.jpg');">
+                    <div class="quests__header quests__header--center" style="background-image: url('img/promo/quests-3.jpg');">
                         <div class="quests__container">
                             <h2 class="quests__title">
                                 Квесты
@@ -195,56 +208,14 @@
                                 <a href="" class="quests__filter">Королев</a>
                             </div>
                             <div class="quests__overlay">
-                                <img src="img/promo/quests-overlay.png" class="cover-image" alt="Промо изображение">
+                                <img src="img/promo/quests-3-overlay.png" class="cover-image" alt="Промо изображение">
                             </div>
                         </div>
                     </div>
-                    <div class="quests__body quests__body--decor">
+                    <div class="quests__body">
                         <div class="quests__container container-sm">
                             <ul class="quests__list">
                                 <li class="quests__item">
-                                    <a href="mafia-den.html" class="quests-card">
-                                        <span class="quests-card__poster">
-                                            <img src="img/quests/mafia-den.jpg" class="cover-image" alt="Постер квеста">
-                                        </span>
-                                        <span class="quests-card__body">
-                                            <span class="quests-card__title h3">Логово <span class='color-accent'>мафии</span></span>
-                                            <span class="quests-card__description text-block">Что скрывается за фасадом добропорядочного бизнесмена?</span>
-                                            <span class="quests-card__stats">
-                                                <span class="quests-card__stats-block icon-users">2-8</span>
-                                                <span class="quests-card__stats-block icon-currency">6000 ₽</span>
-                                            </span>
-                                        </span>
-                                    </a>
-                                </li><li class="quests__item">
-                                    <a href="gunnars-hut.html" class="quests-card">
-                                        <span class="quests-card__poster">
-                                            <img src="img/quests/gunnars-hut.jpg" class="cover-image" alt="Постер квеста">
-                                        </span>
-                                        <span class="quests-card__body">
-                                            <span class="quests-card__title h3">Проклятая <span class='color-accent'>хижина Гуннара</span></span>
-                                            <span class="quests-card__description text-block">Верните Тору его молот и помогите богам Асгарда</span>
-                                            <span class="quests-card__stats">
-                                                <span class="quests-card__stats-block icon-users">2-6</span>
-                                                <span class="quests-card__stats-block icon-currency">6000 ₽</span>
-                                            </span>
-                                        </span>
-                                    </a>
-                                </li><li class="quests__item">
-                                    <a href="baba-yaga.html" class="quests-card">
-                                        <span class="quests-card__poster">
-                                            <img src="img/quests/baba-yaga.jpg" class="cover-image" alt="Постер квеста">
-                                        </span>
-                                        <span class="quests-card__body">
-                                            <span class="quests-card__title h3">Баба-Яга</span>
-                                            <span class="quests-card__description text-block">Вы похищены и заперты в хижине Бабы Яги</span>
-                                            <span class="quests-card__stats">
-                                                <span class="quests-card__stats-block icon-users">2-8</span>
-                                                <span class="quests-card__stats-block icon-currency">6000 ₽</span>
-                                            </span>
-                                        </span>
-                                    </a>
-                                </li><li class="quests__item">
                                     <a href="musketeers.html" class="quests-card">
                                         <span class="quests-card__poster">
                                             <img src="img/quests/musketeers.jpg" class="cover-image" alt="Постер квеста">
@@ -273,15 +244,15 @@
                                         </span>
                                     </a>
                                 </li><li class="quests__item">
-                                    <a href="poltergeist.html" class="quests-card">
+                                    <a href="baba-yaga.html" class="quests-card">
                                         <span class="quests-card__poster">
-                                            <img src="img/quests/poltergeist.jpg" class="cover-image" alt="Постер квеста">
+                                            <img src="img/quests/baba-yaga.jpg" class="cover-image" alt="Постер квеста">
                                         </span>
                                         <span class="quests-card__body">
-                                            <span class="quests-card__title h3">Полтергейст</span>
-                                            <span class="quests-card__description text-block">Ваша задача расследовать исчезновение трех девушек...</span>
+                                            <span class="quests-card__title h3">Баба-Яга</span>
+                                            <span class="quests-card__description text-block">Вы похищены и заперты в хижине Бабы Яги</span>
                                             <span class="quests-card__stats">
-                                                <span class="quests-card__stats-block icon-users">2-6</span>
+                                                <span class="quests-card__stats-block icon-users">2-8</span>
                                                 <span class="quests-card__stats-block icon-currency">6000 ₽</span>
                                             </span>
                                         </span>
@@ -292,13 +263,13 @@
                     </div>
                 </section>
                 <section class="contacts">
-                    <div class="contacts__header" style="background-image: url('img/contacts/contacts-bg.jpg');">
+                    <div class="contacts__header" style="background-image: url('img/contacts/contacts-bg-5.jpg');">
                         <div class="contacts__container container-sm">
                             <div class="contacts__heading">
                                 <h2 class="contacts__title"><span>К</span>онтакты</h2>
                             </div>
                             <div class="contacts__overlay">
-                                <img src="img/contacts/contacts-overlay.png" class="cover-image" alt="Изображение ">
+                                <img src="img/contacts/contacts-5-overlay.png" class="cover-image" alt="Изображение ">
                             </div>
                         </div>
                     </div>
@@ -340,7 +311,7 @@
                             <div class="footer__caption">OreSheK Club</div>
                             <nav aria-label="Меню в подвале" class="footer__menu">
                                 <ul>
-                                    <li><a href="">Антикафе</a></li>
+                                    <li><a href="anti-cafe.html">Антикафе</a></li>
                                     <li><a href="">Акции и подарки</a></li>
                                     <li><a href="rules.html">Правила</a></li>
                                     <li><a href="">О нас</a></li>
@@ -356,7 +327,7 @@
                                     <li><a href="">Игры с ведущим</a></li>
                                     <li><a href="for-kids.html">Детские праздники</a></li>
                                     <li><a href="">Корпоративы</a></li>
-                                    <li><a href="">День рождения</a></li>
+                                    <li><a href="birthday.html">День рождения</a></li>
                                     <li><a href="">Выпускной</a></li>
                                 </ul>
                             </nav>

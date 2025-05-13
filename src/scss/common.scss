@@ -273,6 +273,25 @@ body {
 			bottom: 0;
 		}
 	}
+	&.promo--birthday {
+		min-height: rem(505);
+		@media (min-width: $md4) {
+			min-height: rem(940);
+		}
+		.promo__container {
+			@media (min-width: $md4) {
+				justify-content: center;
+			}
+		}
+		.promo__main {
+			@media (min-width: $md4) {
+				padding-top: rem(100);
+			}
+		}
+		&::after {
+			bottom: 4rem;
+		}
+	}
 	// .promo__container
 	&__container {
 		min-height: 100%;
@@ -595,7 +614,7 @@ body {
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		flex-wrap: wrap;
+
 		gap: rem(10);
 		margin-top: rem(40);
 		@media (min-width: $md4) {
@@ -608,7 +627,7 @@ body {
 		border: rem(1) solid;
 		padding: 0.625rem 1.5625rem;
 		transition: color 0.3s ease;
-		flex: 1 1 auto;
+		flex: 0 1 auto;
 		@media (min-width: $md5) {
 			flex: 0 1 auto;
 		}
@@ -633,6 +652,8 @@ body {
 	}
 	// .quests__list
 	&__list {
+		position: relative;
+		z-index: 2;
 		display: grid;
 		gap: rem(30);
 		@media (min-width: $md4) {

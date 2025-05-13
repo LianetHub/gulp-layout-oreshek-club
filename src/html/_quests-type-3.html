@@ -1,0 +1,24 @@
+<section class="quests">
+    <div class="quests__header quests__header--center" style="background-image: url('@img/promo/quests-3.jpg');">
+        <div class="quests__container">
+            <h2 class="quests__title">
+                Квесты
+            </h2>
+            <div class="quests__filters">
+                <a href="" class="quests__filter active">Все</a>
+                <a href="" class="quests__filter">Мытищи</a>
+                <a href="" class="quests__filter">Королев</a>
+            </div>
+            <div class="quests__overlay">
+                <img src="@img/promo/quests-3-overlay.png" class="cover-image" alt="Промо изображение">
+            </div>
+        </div>
+    </div>
+    <div class="quests__body">
+        <div class="quests__container container-sm">
+            <ul class="quests__list">
+                @@loop('./templates/_quest.html', './html/json/_quests-kids.json')
+            </ul>
+        </div>
+    </div>
+</section>

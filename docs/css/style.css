@@ -16,16 +16,16 @@
 @font-face {
   font-family: "Inter";
   font-display: swap;
-  src: url("../fonts/Inter-Italic.woff2") format("woff2"), url("../fonts/Inter-Italic.woff") format("woff");
-  font-weight: 400;
-  font-style: italic;
+  src: url("../fonts/Inter-Bold.woff2") format("woff2"), url("../fonts/Inter-Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
 }
 @font-face {
   font-family: "Inter";
   font-display: swap;
-  src: url("../fonts/Inter-Bold.woff2") format("woff2"), url("../fonts/Inter-Bold.woff") format("woff");
-  font-weight: 700;
-  font-style: normal;
+  src: url("../fonts/Inter-Italic.woff2") format("woff2"), url("../fonts/Inter-Italic.woff") format("woff");
+  font-weight: 400;
+  font-style: italic;
 }
 @font-face {
   font-family: "Inter";
@@ -35,17 +35,17 @@
   font-style: normal;
 }
 @font-face {
-  font-family: "Inter";
-  font-display: swap;
-  src: url("../fonts/Inter-Black.woff2") format("woff2"), url("../fonts/Inter-Black.woff") format("woff");
-  font-weight: 900;
-  font-style: normal;
-}
-@font-face {
   font-family: "Lighthaus";
   font-display: swap;
   src: url("../fonts/Lighthaus-Regular.woff2") format("woff2"), url("../fonts/Lighthaus-Regular.woff") format("woff");
   font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Inter";
+  font-display: swap;
+  src: url("../fonts/Inter-Black.woff2") format("woff2"), url("../fonts/Inter-Black.woff") format("woff");
+  font-weight: 900;
   font-style: normal;
 }
 .form__select::before, .form__checkbox-input:checked + .form__checkbox-text::before, [class^=icon-]:before,
@@ -351,6 +351,64 @@ h4,
     opacity: 0;
   }
 }
+@keyframes moveOnScroll {
+  0% {
+    transform: translateY(0) scale(1) rotate(0deg);
+    opacity: 1;
+  }
+  25% {
+    transform: translateY(3rem) translateX(10%) scale(1.01) rotate(10deg);
+    opacity: 0.8;
+  }
+  50% {
+    transform: translateY(6rem) scale(0.975) translateX(-60%) rotate(20deg);
+    opacity: 0.6;
+  }
+  75% {
+    transform: translateY(9rem) translateX(-13%) scale(1.05) rotate(30deg);
+    opacity: 0.8;
+  }
+  100% {
+    transform: translateY(12rem) translateX(30%) scale(1) rotate(40deg);
+    opacity: 1;
+  }
+}
+.lighten {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.light {
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 2;
+  opacity: 0.8;
+  background: radial-gradient(50% 50% at 50% 50%, #5eece2 0%, rgba(5, 5, 5, 0.01) 100%);
+}
+@media (max-width: 767.98px) {
+  .light {
+    zoom: 0.5;
+  }
+  .light:nth-child(even) {
+    display: none;
+  }
+}
+.light.light-yellow {
+  background: radial-gradient(50% 50% at 50% 50%, #efcc4f 0%, rgba(239, 204, 79, 0) 100%);
+}
+.light.blink {
+  animation: blink 3s infinite ease-in-out alternate;
+}
+.light.move-on-scroll {
+  animation: moveOnScroll ease infinite alternate, blink 3s infinite ease-in-out alternate;
+}
+
 .fancybox__container {
   max-width: 100% !important;
   padding: 0 !important;
@@ -1006,6 +1064,27 @@ body.lock {
 .promo.promo--anti-cafe::after {
   bottom: 0;
 }
+.promo.promo--birthday {
+  min-height: 31.5625rem;
+}
+@media (min-width: 767.98px) {
+  .promo.promo--birthday {
+    min-height: 58.75rem;
+  }
+}
+@media (min-width: 767.98px) {
+  .promo.promo--birthday .promo__container {
+    justify-content: center;
+  }
+}
+@media (min-width: 767.98px) {
+  .promo.promo--birthday .promo__main {
+    padding-top: 6.25rem;
+  }
+}
+.promo.promo--birthday::after {
+  bottom: 4rem;
+}
 .promo__container {
   min-height: 100%;
   width: 100%;
@@ -1327,7 +1406,6 @@ body.lock {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-wrap: wrap;
   gap: 0.625rem;
   margin-top: 2.5rem;
 }
@@ -1341,7 +1419,7 @@ body.lock {
   border: 0.0625rem solid;
   padding: 0.625rem 1.5625rem;
   transition: color 0.3s ease;
-  flex: 1 1 auto;
+  flex: 0 1 auto;
 }
 @media (min-width: 575.98px) {
   .quests__filter, .gallery__tab-btn {
@@ -1368,6 +1446,8 @@ body.lock {
   background: url("../img/decor-line-yellow.svg") 0 center/100% auto no-repeat;
 }
 .quests__list {
+  position: relative;
+  z-index: 2;
   display: grid;
   gap: 1.875rem;
 }
@@ -2364,6 +2444,10 @@ body.lock {
   .description__card {
     border-radius: 2.5rem;
     padding: 2.5rem 1.38rem 1.875rem 1.875rem;
+    margin-bottom: 8.125rem;
+  }
+  .description__card:has(.description__card-hint) {
+    margin-bottom: 0;
   }
 }
 .description__card-list {

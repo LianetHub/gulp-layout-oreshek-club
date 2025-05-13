@@ -226,6 +226,63 @@ h4,
 	}
 }
 
+@keyframes moveOnScroll {
+	0% {
+		transform: translateY(0) scale(1) rotate(0deg);
+		opacity: 1;
+	}
+	25% {
+		transform: translateY(3rem) translateX(10%) scale(1.01) rotate(10deg);
+		opacity: 0.8;
+	}
+	50% {
+		transform: translateY(6rem) scale(0.975) translateX(-60%) rotate(20deg);
+		opacity: 0.6;
+	}
+	75% {
+		transform: translateY(9rem) translateX(-13%) scale(1.05) rotate(30deg);
+		opacity: 0.8;
+	}
+	100% {
+		transform: translateY(12rem) translateX(30%) scale(1) rotate(40deg);
+		opacity: 1;
+	}
+}
+
+.lighten {
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	overflow: hidden;
+	pointer-events: none;
+}
+
+.light {
+	position: absolute;
+	border-radius: 50%;
+	pointer-events: none;
+	z-index: 2;
+	opacity: 0.8;
+	background: radial-gradient(50% 50% at 50% 50%, #5eece2 0%, rgba(5, 5, 5, 0.01) 100%);
+	@media (max-width: $md4) {
+		zoom: 0.5;
+		&:nth-child(even) {
+			display: none;
+		}
+	}
+	&.light-yellow {
+		background: radial-gradient(50% 50% at 50% 50%, #efcc4f 0%, rgba(239, 204, 79, 0) 100%);
+	}
+	&.blink {
+		animation: blink 3s infinite ease-in-out alternate;
+	}
+	&.move-on-scroll {
+		animation: moveOnScroll ease infinite alternate, blink 3s infinite ease-in-out alternate;
+	}
+}
+
 // .rate {
 // 	display: flex;
 // 	align-items: center;

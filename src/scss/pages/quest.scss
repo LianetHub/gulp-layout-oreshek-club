@@ -101,6 +101,10 @@
 		@media (min-width: $md3) {
 			border-radius: rem(40);
 			padding: rem(40) 1.38rem rem(30) rem(30);
+			margin-bottom: rem(130);
+			&:has(.description__card-hint) {
+				margin-bottom: 0;
+			}
 		}
 	}
 	// .description__card-caption

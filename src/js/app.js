@@ -256,10 +256,68 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
 
+    const wrapper = document.querySelector('.wrapper');
+    const wrapperHeight = wrapper.offsetHeight;
+    const wrapperWidth = wrapper.offsetWidth;
+    let lightersWrapper = document.createElement('div');
+    lightersWrapper.classList.add('lighten');
 
 
+    if (wrapperHeight < 2000) return;
+
+    const lightCount = Math.floor((wrapperHeight - 2000) / 160);
+
+    for (let i = 0; i < lightCount; i++) {
+        const light = document.createElement('span');
+        light.classList.add('light');
+
+        if (Math.random() < 0.3) {
+            light.classList.add('light-yellow');
+        }
+
+        const sizeRem = (Math.random() * (90 - 30) + 30) / 16;
+        light.style.width = `${sizeRem}rem`;
+        light.style.height = `${sizeRem}rem`;
+
+        const lightSizeRem = sizeRem;
+
+        let leftRem = Math.random() * (100 - lightSizeRem);
+
+        if (leftRem + lightSizeRem > wrapperWidth / 16) {
+            leftRem = (wrapperWidth / 16) - lightSizeRem;
+        }
+
+        light.style.position = 'absolute';
+        light.style.top = `${Math.random() * 100}%`;
+        light.style.left = `${leftRem}rem`;
+        light.style.pointerEvents = 'none';
+        light.style.zIndex = '1';
 
 
+        const animationTime = Math.random() * (5 - 2) + 2;
+        light.style.animationDuration = `${animationTime}s`;
+
+        if (Math.random() < 0.5) {
+            light.classList.add('blink');
+            const animationTime = Math.random() * (5 - 2) + 2;
+            light.style.animationDuration = `${animationTime}s`;
+        } else {
+            light.classList.add('move-on-scroll');
+            light.setAttribute('data-speed', lightSizeRem);
+
+
+            const duration = Math.random() * (20 - 2) + 2;
+            const delay = Math.random() * (20 - 2) + 2;
+
+            light.style.animationDuration = `${duration}s`;
+            light.style.animationDelay = `${delay}s`;
+        }
+
+        lightersWrapper.appendChild(light)
+    }
+
+
+    wrapper.appendChild(lightersWrapper);
 });
 
 HTMLElement.prototype.slideToggle = function (duration, callback) {
