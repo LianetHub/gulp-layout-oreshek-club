@@ -228,6 +228,37 @@ body {
 			}
 		}
 	}
+	&.promo--anti-cafe {
+		min-height: rem(575);
+		@media (min-width: $md4) {
+			min-height: rem(882);
+		}
+		.promo__subtitle {
+			@media (min-width: $md4) {
+				margin-top: rem(34);
+				max-width: rem(780);
+			}
+		}
+		.promo__container {
+			@media (min-width: $md4) {
+				justify-content: center;
+			}
+		}
+		.promo__main {
+			@media (min-width: $md4) {
+				padding-top: rem(70);
+			}
+		}
+		.promo__btn {
+			min-width: rem(261);
+			@media (min-width: $md5) {
+				min-width: "auto";
+			}
+		}
+		&::after {
+			bottom: 0;
+		}
+	}
 	// .promo__container
 	&__container {
 		min-height: 100%;
@@ -400,6 +431,14 @@ body {
 	}
 	// .services__container
 	&__container {
+	}
+	// .services__title
+	&__title {
+		text-align: center;
+		margin-bottom: rem(50);
+		@media (min-width: $md4) {
+			margin-bottom: rem(80);
+		}
 	}
 	// .services__list
 	&__list {
@@ -678,12 +717,18 @@ body {
 	@media (min-width: $md5) {
 		padding: 0;
 	}
+	// .contacts__header
 	&__header {
 		position: relative;
 		padding: rem(120) 0 rem(190);
 		background-size: cover;
 		background-repeat: no-repeat;
 		background-position: center;
+		&.contacts__header--no-line {
+			&::after {
+				display: none;
+			}
+		}
 		@media (min-width: $md4) {
 			padding: rem(160) 0 rem(220);
 		}
@@ -899,5 +944,45 @@ body {
 		@media (min-width: $md4) {
 			margin-top: rem(30);
 		}
+	}
+}
+
+.feedback {
+	padding: 0 0 2rem;
+	@media (min-width: $md4) {
+		padding: 5.5rem 0 2rem;
+	}
+	// .feedback__container
+	&__container {
+	}
+	// .feedback__body
+	&__body {
+		display: grid;
+		gap: rem(40);
+		@media (min-width: $md4) {
+			grid-template-columns: repeat(2, 1fr);
+		}
+	}
+	// .feedback__main
+	&__main {
+		@media (min-width: $md4) {
+			padding: 1rem 0 0;
+		}
+	}
+	// .feedback__title
+	&__title {
+	}
+	// .feedback__subtitle
+	&__subtitle {
+		margin-top: rem(16);
+		@media (min-width: $md4) {
+			margin-top: rem(40);
+		}
+	}
+	// .feedback__form
+	&__form {
+		display: flex;
+		flex-direction: column;
+		gap: rem(13);
 	}
 }

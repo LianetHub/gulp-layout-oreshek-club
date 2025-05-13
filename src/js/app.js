@@ -115,6 +115,21 @@ document.addEventListener("DOMContentLoaded", () => {
         }
 
 
+        if (target.matches('.anti-cafe__tab-btn')) {
+            const tabs = document.querySelectorAll('.anti-cafe__tab-btn');
+            const contents = document.querySelectorAll('.anti-cafe__tab-content');
+
+            const tabIndex = [...tabs].indexOf(target);
+
+            tabs.forEach(tab => tab.classList.remove('active'));
+            target.classList.add('active');
+
+            contents.forEach((content, index) => {
+                content.classList.toggle('active', index === tabIndex);
+            });
+        }
+
+
 
     });
 
@@ -128,6 +143,24 @@ document.addEventListener("DOMContentLoaded", () => {
         getMobileSlider('.description__gallery', {
             spaceBetween: 15,
             slidesPerView: 1.1
+        })
+    }
+    if (document.querySelectorAll('.anti-cafe__gallery')) {
+        document.querySelectorAll('.anti-cafe__gallery')?.forEach(slider => {
+            new Swiper(slider, {
+                slidesPerView: "auto",
+                spaceBetween: 15,
+                breakpoints: {
+                    767.98: {
+                        slidesPerView: 2,
+                        spaceBetween: 30,
+                    },
+                    1199.98: {
+                        slidesPerView: 3,
+                        spaceBetween: 40,
+                    }
+                }
+            })
         })
     }
 

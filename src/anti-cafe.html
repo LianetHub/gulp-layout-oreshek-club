@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ru">
+    @@include('html/_head.html', {
+    'title': 'Главная страница'
+    })
+    <body>
+        <div class="wrapper">
+            @@include('html/_header.html', {})
+            <main class="page">
+                <section class="promo promo--anti-cafe" style="background-image: url('@img/promo/anti-cafe.jpg');">
+                    <div class="promo__container">
+                        <div class="promo__overlay">
+                            <img src="@img/promo/anti-cafe-overlay.png" class="cover-image" alt="Промо изображение">
+                        </div>
+                        <div class="promo__main">
+                            <h1 class="promo__title">
+                                Мы проведем <span class="color-accent">незабываемый праздник!</span>
+                            </h1>
+                            <p class="promo__subtitle text-block-lg">В семейном кругу, с друзьями или коллегами проводите время активно или&nbsp;растворитесь почти в домашнем уюте нашего антикафе</p>
+                            <div class="promo__btns">
+                                <a href="#callback" data-fancybox class="promo__btn btn btn-primary">Заказать праздник</a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <div class="description">
+                    <div class="description__container container-sm">
+                        <div class="description__body description__body-sm text-block-lg">
+                            <p>Приятная и дружелюбная атмосфера, оригинальный праздничный интерьер, приветливые администраторы, интересные собеседники и полная свобода творчества – это всё антикафе Oreshekclub</p>
+                            <p>В семейном кругу, с друзьями или коллегами проводите время активно или растворитесь почти в домашнем уюте нашего антикафе</p>
+                            <p>Мы всегда рады нашим гостям!</p>
+                        </div>
+                    </div>
+                </div>
+                <section class="anti-cafe">
+                    <div class="anti-cafe__container container-sm">
+                        <h2 class="anti-cafe__title">Наши Антикафе</h2>
+                        <div class="anti-cafe__tabs">
+                            <button type="button" class="anti-cafe__tab-btn active">Мытищи</button>
+                            <button type="button" class="anti-cafe__tab-btn">Королев</button>
+                        </div>
+                        <div class="anti-cafe__tabs-body">
+                            <div class="anti-cafe__tab-content active">
+                                <div class="anti-cafe__gallery swiper">
+                                    <div class="swiper-wrapper">
+                                        <a href="@img/anti-cafe/01.png" data-fancybox="anti-cafe-mytishi" class="anti-cafe__gallery-item swiper-slide">
+                                            <img src="@img/anti-cafe/01.png" class="cover-image" alt="Фото анти-кафе">
+                                        </a>
+                                        <a href="@img/anti-cafe/02.png" data-fancybox="anti-cafe-mytishi" class="anti-cafe__gallery-item swiper-slide">
+                                            <img src="@img/anti-cafe/02.png" class="cover-image" alt="Фото анти-кафе">
+                                        </a>
+                                        <a href="@img/anti-cafe/03.png" data-fancybox="anti-cafe-mytishi" class="anti-cafe__gallery-item swiper-slide">
+                                            <img src="@img/anti-cafe/03.png" class="cover-image" alt="Фото анти-кафе">
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="anti-cafe__tab-content">
+                                <div class="anti-cafe__gallery swiper">
+                                    <div class="swiper-wrapper">
+                                        <a href="@img/anti-cafe/03.png" data-fancybox="anti-cafe-korolev" class="anti-cafe__gallery-item swiper-slide">
+                                            <img src="@img/anti-cafe/03.png" class="cover-image" alt="Фото анти-кафе">
+                                        </a>
+                                        <a href="@img/anti-cafe/01.png" data-fancybox="anti-cafe-korolev" class="anti-cafe__gallery-item swiper-slide">
+                                            <img src="@img/anti-cafe/01.png" class="cover-image" alt="Фото анти-кафе">
+                                        </a>
+                                        <a href="@img/anti-cafe/02.png" data-fancybox="anti-cafe-korolev" class="anti-cafe__gallery-item swiper-slide">
+                                            <img src="@img/anti-cafe/02.png" class="cover-image" alt="Фото анти-кафе">
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="services">
+                    <div class="services__container container-sm">
+                        <h2 class="services__title">ЧТО ЕЩЕ <span class="color-accent">МЫ МОЖЕМ?</span></h2>
+                        <ul class="services__list">
+                            @@loop('./html/templates/_service.html', './html/json/_services-home.json')
+                        </ul>
+                    </div>
+                </section>
+                @@include('html/_feedback.html', {
+                "title": "Остались вопросы?"
+                })
+                @@include('html/_contacts-type-4.html', {})
+            </main>
+            @@include('html/_footer.html', {})
+            @@include('html/_modal.html', {})
+            @@include('html/_js.html', {})
+        </div>
+    </body>
+</html>

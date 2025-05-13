@@ -947,6 +947,41 @@ body.lock {
     height: 4rem;
   }
 }
+.promo.promo--anti-cafe {
+  min-height: 35.9375rem;
+}
+@media (min-width: 767.98px) {
+  .promo.promo--anti-cafe {
+    min-height: 55.125rem;
+  }
+}
+@media (min-width: 767.98px) {
+  .promo.promo--anti-cafe .promo__subtitle {
+    margin-top: 2.125rem;
+    max-width: 48.75rem;
+  }
+}
+@media (min-width: 767.98px) {
+  .promo.promo--anti-cafe .promo__container {
+    justify-content: center;
+  }
+}
+@media (min-width: 767.98px) {
+  .promo.promo--anti-cafe .promo__main {
+    padding-top: 4.375rem;
+  }
+}
+.promo.promo--anti-cafe .promo__btn {
+  min-width: 16.3125rem;
+}
+@media (min-width: 575.98px) {
+  .promo.promo--anti-cafe .promo__btn {
+    min-width: "auto";
+  }
+}
+.promo.promo--anti-cafe::after {
+  bottom: 0;
+}
 .promo__container {
   min-height: 100%;
   width: 100%;
@@ -1119,6 +1154,15 @@ body.lock {
     padding: 9.6875rem 0 6.9375rem 0;
   }
 }
+.services__title {
+  text-align: center;
+  margin-bottom: 3.125rem;
+}
+@media (min-width: 767.98px) {
+  .services__title {
+    margin-bottom: 5rem;
+  }
+}
 .services__list {
   display: grid;
   gap: 0.9375rem;
@@ -1207,7 +1251,7 @@ body.lock {
     padding: 11.25rem 0 17.5rem;
   }
 }
-.quests__header.quests__header--center .quests__filters {
+.quests__header.quests__header--center .quests__filters, .quests__header.quests__header--center .anti-cafe__tabs {
   position: absolute;
   bottom: 0;
   left: 0;
@@ -1251,7 +1295,7 @@ body.lock {
   white-space: nowrap;
   flex-shrink: 0;
 }
-.quests__filters {
+.quests__filters, .anti-cafe__tabs {
   position: relative;
   z-index: 3;
   display: flex;
@@ -1262,11 +1306,11 @@ body.lock {
   margin-top: 2.5rem;
 }
 @media (min-width: 767.98px) {
-  .quests__filters {
+  .quests__filters, .anti-cafe__tabs {
     margin-top: 0;
   }
 }
-.quests__filter {
+.quests__filter, .anti-cafe__tab-btn {
   border-radius: 0.5rem;
   border: 0.0625rem solid;
   padding: 0.625rem 1.5625rem;
@@ -1274,15 +1318,15 @@ body.lock {
   flex: 1 1 auto;
 }
 @media (min-width: 575.98px) {
-  .quests__filter {
+  .quests__filter, .anti-cafe__tab-btn {
     flex: 0 1 auto;
   }
 }
-.quests__filter.active {
+.quests__filter.active, .active.anti-cafe__tab-btn {
   color: #44cbc3;
 }
 @media (any-hover: hover) {
-  .quests__filter:hover {
+  .quests__filter:hover, .anti-cafe__tab-btn:hover {
     color: #44cbc3;
   }
 }
@@ -1400,6 +1444,9 @@ body.lock {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+}
+.contacts__header.contacts__header--no-line::after {
+  display: none;
 }
 @media (min-width: 767.98px) {
   .contacts__header {
@@ -1616,6 +1663,42 @@ body.lock {
   .steps__desc {
     margin-top: 1.875rem;
   }
+}
+
+.feedback {
+  padding: 0 0 2rem;
+}
+@media (min-width: 767.98px) {
+  .feedback {
+    padding: 5.5rem 0 2rem;
+  }
+}
+.feedback__body {
+  display: grid;
+  gap: 2.5rem;
+}
+@media (min-width: 767.98px) {
+  .feedback__body {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (min-width: 767.98px) {
+  .feedback__main {
+    padding: 1rem 0 0;
+  }
+}
+.feedback__subtitle {
+  margin-top: 1rem;
+}
+@media (min-width: 767.98px) {
+  .feedback__subtitle {
+    margin-top: 2.5rem;
+  }
+}
+.feedback__form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8125rem;
 }
 
 .header {
@@ -2011,16 +2094,21 @@ body.lock {
   }
 }
 .description__body {
-  margin-top: 1.25rem;
   max-width: 53.3125rem;
   margin-left: auto;
   margin-right: auto;
 }
+.description__body.description__body-sm {
+  max-width: 46.875rem;
+}
 .description__body p:not(:last-child) {
   margin-bottom: 1.5rem;
 }
+.description__body:not(:first-child) {
+  margin-top: 1.25rem;
+}
 @media (min-width: 767.98px) {
-  .description__body {
+  .description__body:not(:first-child) {
     margin-top: 3.75rem;
   }
 }
@@ -2348,6 +2436,90 @@ body.lock {
 @media (min-width: 767.98px) {
   .booking__more {
     margin-top: 7rem;
+  }
+}
+
+.anti-cafe {
+  padding: 4.75rem 0 4rem;
+  position: relative;
+  z-index: 1;
+}
+@media (min-width: 767.98px) {
+  .anti-cafe {
+    padding: 3.75rem 0 9rem;
+  }
+}
+.anti-cafe::after {
+  content: "";
+  position: absolute;
+  bottom: -2rem;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: -1;
+  background: url("../img/decor-line-mobile.svg") 75% bottom/32.875rem auto no-repeat;
+}
+@media (min-width: 575.98px) {
+  .anti-cafe::after {
+    background: url("../img/decor-line.svg") center bottom/100% auto no-repeat;
+  }
+}
+@media (min-width: 767.98px) {
+  .anti-cafe::after {
+    bottom: -15rem;
+  }
+}
+.anti-cafe__title {
+  text-align: center;
+}
+.anti-cafe__tabs {
+  margin-top: 2.5rem;
+}
+@media (min-width: 767.98px) {
+  .anti-cafe__tabs {
+    margin-top: 3.75rem;
+  }
+}
+.anti-cafe__tab-btn {
+  flex: 0 1 auto;
+}
+.anti-cafe__tabs-body {
+  margin-top: 3.25rem;
+}
+@media (min-width: 767.98px) {
+  .anti-cafe__tabs-body {
+    margin-top: 4.125rem;
+  }
+}
+.anti-cafe__tab-content {
+  display: none;
+}
+.anti-cafe__tab-content.active {
+  display: block;
+}
+.anti-cafe__gallery {
+  overflow: visible;
+}
+.anti-cafe__gallery-item {
+  border-radius: 2.5rem;
+  overflow: hidden;
+  height: auto;
+  width: 19.625rem;
+  aspect-ratio: 1.4811320755;
+}
+@media (min-width: 767.98px) {
+  .anti-cafe__gallery-item {
+    aspect-ratio: 1;
+    width: auto;
+  }
+}
+.anti-cafe__gallery-item img {
+  transition: transform 0.3s ease;
+}
+@media (any-hover: hover) {
+  .anti-cafe__gallery-item:hover img {
+    transform: scale(1.015);
   }
 }
 
