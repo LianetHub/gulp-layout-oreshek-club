@@ -1114,9 +1114,17 @@ body {
 }
 
 .feedback {
+	position: relative;
+	z-index: 2;
 	padding: 0 0 2rem;
 	@media (min-width: $md4) {
 		padding: 5.5rem 0 2rem;
+	}
+	& + .banner.banner--offset-top {
+		margin-top: -1rem;
+		@media (min-width: $md4) {
+			margin-top: -6rem;
+		}
 	}
 	// .feedback__container
 	&__container {

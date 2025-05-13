@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ru">
+    @@include('html/_head.html', {
+    'title': 'Контакты'
+    })
+    <body>
+        <div class="wrapper">
+            @@include('html/_header.html', {})
+            <main class="page">
+                @@include('html/_contacts-type-6.html', {})
+                <section class="location">
+                    <div class="location__container container-sm">
+                        <h2 class="location__title">Как добраться до <span class="color-accent">OreSheK Club</span></h2>
+                        <div class="location__map">
+                            <img src="@img/map.png" class="cover-image" alt="карта">
+                        </div>
+                        <div class="location__body">
+                            <div class="location__column text-block">
+                                <h3 class="location__title">Королев</h3>
+                                <a href="tel:89776252598" class="location__phone">8 (977) 625-25-98</a>
+                                <p class="location__worktime"><strong>Время работы :</strong> будни с 11:00 до 21:00; выходные с 10:00 до 21:00 часов</p>
+                                <div class="location__text">
+                                    <p>На автобусе: От метро ВДНХ (рядом с гостиницей «Космос») в сторону г.Королёва ходят автобусы маршрута № 576, 392, 565. Нужно доехать до остановки ЦНИИмаш, перейти дорогу по подземному переходу, обойти торговый центр с левой стороны. Следующий дом, первый вход со стороны ул. Ленина.</p>
+                                    <p>Электричка: С Ярославского вокзала до г.Королёва можно доехать на электричке. Ваша остановка — «Подлипки-Дачные». Из подземного перехода нужно выйти на ул. Коминтерна. На автобусе № 576, 392, 565 доехать до остановки «ул. Ленина», перейти дорогу. Второй дом слева, первый вход со стороны ул. Ленина.</p>
+                                </div>
+                            </div>
+                            <div class="location__column text-block">
+                                <h3 class="location__title">Мытищи</h3>
+                                <a href="tel:89775526013" class="location__phone">8 (977) 552-60-13</a>
+                                <p class="location__worktime"><strong>Время работы :</strong> будни с 11:00 до 21:00; выходные с 10:00 до 21:00 часов</p>
+                                <div class="location__text">
+                                    <p>м. Медведково, последний вагон из центра, выход к маршруткам 1163, 169, доехать до ТЦ Июнь и вернуться пешком 600 метров до автомойки “Пингвин” или попросить остановить водителя у автомойки “Пингвин”</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                @@include('html/_feedback.html', {
+                "title": "Остались вопросы?"
+                })
+                <section class="banner banner--offset-top">
+                    <h2 class="banner__caption">
+                        OreSheK Club
+                    </h2>
+                    <div class="banner__image">
+                        <img src="@img/banners/contacts.jpg" class="cover-image" alt="Баннер">
+                    </div>
+                </section>
+            </main>
+            @@include('html/_footer.html', {})
+            @@include('html/_modal.html', {})
+            @@include('html/_js.html', {})
+        </div>
+    </body>
+</html>

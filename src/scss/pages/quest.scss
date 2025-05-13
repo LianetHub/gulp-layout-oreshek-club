@@ -322,6 +322,19 @@
 	&__btn {
 		margin-top: rem(30);
 	}
+	// .banner__caption
+	&__caption {
+		font-size: clamp(3.17019rem, 12.5vw, 15rem);
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		z-index: 2;
+		width: 100%;
+		text-align: center;
+		color: $yellow;
+		opacity: 0.33;
+	}
 	.description {
 		position: relative;
 		z-index: 2;

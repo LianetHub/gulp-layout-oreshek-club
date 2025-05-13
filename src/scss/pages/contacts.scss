@@ -1,0 +1,95 @@
+.location {
+	padding: 6rem 0 4.4rem;
+	@media (min-width: $md4) {
+		padding: 14rem 0 0rem;
+	}
+	position: relative;
+	z-index: 2;
+	&::after {
+		content: "";
+		position: absolute;
+		top: -6rem;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		pointer-events: none;
+		z-index: -1;
+		background: url("@img/decor-line-yellow-mobile.svg") 75% top / 32.875rem auto no-repeat;
+		@media (min-width: $md5) {
+			background: url("@img/decor-line-yellow.svg") center top / 100% auto no-repeat;
+		}
+		@media (min-width: $md3) {
+			top: -13rem;
+		}
+	}
+	// .location__container
+	&__container {
+	}
+	// .location__title
+	&__title {
+		text-align: center;
+	}
+	// .location__map
+	&__map {
+		border-radius: 2.5rem;
+		overflow: hidden;
+		display: flex;
+		margin-top: 2.56rem;
+		@media (min-width: $md3) {
+			margin-top: 5.38rem;
+		}
+		& img {
+			min-height: 19.125rem;
+		}
+	}
+	// .location__body
+	&__body {
+		display: grid;
+		gap: 2.5rem;
+		margin-top: 3.96rem;
+		@media (min-width: $md3) {
+			margin-top: 4.56rem;
+			grid-template-columns: repeat(2, 1fr);
+		}
+	}
+	// .location__column
+	&__column {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		justify-content: flex-end;
+
+		border-radius: 2.5rem;
+		background: $glass;
+		padding: 3.62rem 2.5rem 5.19rem;
+		backdrop-filter: blur(rem(15));
+		-webkit-backdrop-filter: blur(rem(15));
+	}
+	// .location__phone
+	&__phone {
+		margin-top: 1.25rem;
+		color: $yellow;
+		font-size: 1rem;
+		font-weight: 700;
+		line-height: 150%;
+		@media (any-hover: hover) {
+			&:hover {
+				color: $turquoise;
+			}
+		}
+	}
+	// .location__text
+	&__text {
+		margin-top: 1.25rem;
+		max-width: 27.66075rem;
+		& p {
+			&:not(:last-child) {
+				margin-bottom: 1.5em;
+			}
+		}
+	}
+	// .location__worktime
+	&__worktime {
+		max-width: 27.66075rem;
+	}
+}
