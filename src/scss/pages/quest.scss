@@ -23,6 +23,15 @@
 			}
 		}
 	}
+	&.description--graduation {
+		background: url("@img/dragon.png") 0 0 / 100% auto no-repeat;
+		@media (max-width: $md4) {
+			padding-top: 10rem;
+		}
+		@media (min-width: $md4) {
+			background: url("@img/dragon.png") 0 0 / auto 100% no-repeat;
+		}
+	}
 	// .description__image
 	&__image {
 		max-width: 90%;
@@ -242,6 +251,9 @@
 		&.banner--offset-top {
 			margin-top: -4rem;
 		}
+	}
+	& + .services {
+		padding-top: 0;
 	}
 	// .banner__image
 	&__image {

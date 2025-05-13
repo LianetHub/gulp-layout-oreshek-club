@@ -347,6 +347,26 @@ body {
 			bottom: 0;
 		}
 	}
+	&.promo--graduation {
+		min-height: rem(380);
+		@media (min-width: $md5) {
+			min-height: rem(505);
+		}
+		@media (min-width: $md4) {
+			min-height: rem(882);
+		}
+		.promo__container {
+			@media (min-width: $md4) {
+				justify-content: center;
+			}
+		}
+		.promo__main {
+			padding-top: 10rem;
+		}
+		&::after {
+			bottom: 0;
+		}
+	}
 	// .promo__container
 	&__container {
 		min-height: 100%;
@@ -1050,6 +1070,7 @@ body {
 	}
 	// .steps__body
 	&__body {
+		position: relative;
 		display: flex;
 		flex-direction: column;
 		gap: rem(35);
@@ -1057,6 +1078,26 @@ body {
 			gap: rem(24);
 			align-items: flex-start;
 			flex-direction: row;
+		}
+	}
+	// .steps__decor
+	&__decor {
+		position: absolute;
+		top: 8rem;
+		left: 0;
+		z-index: -1;
+		width: 100vw;
+
+		@media (min-width: $md3) {
+			width: 40%;
+		}
+		&::before {
+			content: "";
+			position: absolute;
+			inset: rem(-1);
+			background: linear-gradient(to bottom, $black 0%, transparent) 0 0 / 100% 50% no-repeat, linear-gradient(to top, $black 0%, transparent) 0 bottom / 100% 50% no-repeat,
+				linear-gradient(to right, $black 0%, transparent) 0 0 / 50% 100% no-repeat, linear-gradient(to left, $black 0%, transparent) 100% 0 / 40% 100% no-repeat;
+			pointer-events: none;
 		}
 	}
 	// .steps__title
@@ -1139,6 +1180,9 @@ body {
 		@media (min-width: $md4) {
 			margin-top: -6rem;
 		}
+	}
+	& + .quests {
+		margin-top: 10rem;
 	}
 	// .feedback__container
 	&__container {
