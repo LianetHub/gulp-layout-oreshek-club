@@ -145,8 +145,28 @@ document.addEventListener("DOMContentLoaded", () => {
             slidesPerView: 1.1
         })
     }
-    if (document.querySelectorAll('.anti-cafe__gallery')) {
-        document.querySelectorAll('.anti-cafe__gallery')?.forEach(slider => {
+
+    if (document.querySelectorAll('.videos__slider')) {
+        document.querySelectorAll('.videos__slider')?.forEach(slider => {
+            new Swiper(slider, {
+                slidesPerView: "auto",
+                spaceBetween: 15,
+                breakpoints: {
+                    767.98: {
+                        slidesPerView: 2,
+                        spaceBetween: 30,
+                    },
+                    1199.98: {
+                        slidesPerView: 3,
+                        spaceBetween: 40,
+                    }
+                }
+            })
+        })
+    }
+
+    if (document.querySelectorAll('.gallery__slider')) {
+        document.querySelectorAll('.gallery__slider')?.forEach(slider => {
             new Swiper(slider, {
                 slidesPerView: "auto",
                 spaceBetween: 15,
