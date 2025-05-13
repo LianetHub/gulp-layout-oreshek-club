@@ -1,0 +1,47 @@
+.about {
+	padding: 6rem 0 3rem;
+	@media (min-width: $md4) {
+		padding: 8rem 0 11.5rem;
+	}
+	// .about__container
+	&__container {
+	}
+	// .about__title
+	&__title {
+		text-align: center;
+	}
+	// .about__body
+	&__body {
+		display: grid;
+		align-items: center;
+		gap: rem(60);
+		margin-top: rem(36);
+		@media (min-width: $md3) {
+			margin-top: rem(72);
+			grid-template-columns: repeat(2, 1fr);
+		}
+	}
+	// .about__image
+	&__image {
+		position: relative;
+		order: 1;
+		@media (min-width: $md3) {
+			order: 0;
+		}
+		&::before {
+			content: "";
+			position: absolute;
+			inset: rem(-1);
+			background: linear-gradient(to bottom, $black 0%, transparent) 0 0 / 100% 30% no-repeat, linear-gradient(to top, $black 0%, transparent) 0 bottom / 100% 30% no-repeat,
+				linear-gradient(to right, $black 0%, transparent) 0 0 / 10% 100% no-repeat, linear-gradient(to left, $black 0%, transparent) 100% 0 / 10% 100% no-repeat;
+			pointer-events: none;
+		}
+	}
+	// .about__desc
+	&__desc {
+		text-align: center;
+		@media (min-width: $md3) {
+			text-align: left;
+		}
+	}
+}

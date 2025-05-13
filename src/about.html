@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ru">
+    @@include('html/_head.html', {
+    'title': 'О нас'
+    })
+    <body>
+        <div class="wrapper">
+            @@include('html/_header.html', {})
+            <main class="page">
+                <section class="promo promo--about" style="background-image: url('@img/promo/about.jpg');">
+                    <div class="promo__container">
+                        <div class="promo__caption">Oreshekclub</div>
+                    </div>
+                </section>
+                <div class="description">
+                    <div class="description__container container-sm">
+                        <div class="description__body text-block-lg">
+                            <p>
+                                Добро пожаловать в Oreshekclub — уникальное пространство для увлекательного досуга и незабываемых впечатлений! Мы, конечно, не первые на рынке квестов, но и не последние. Наша цель — создать особую атмосферу, которая сделает ваше времяпрепровождение интересным и насыщенным.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <section class="about">
+                    <div class="about__container container-sm">
+                        <h2 class="about__title"><span class="color-accent">Как все</span> начиналось</h2>
+                        <div class="about__body">
+                            <div class="about__image">
+                                <img src="@img/about.jpg" class="cover-image" alt="О нас">
+                            </div>
+                            <p class="about__desc text-block-lg">Появление Oreshekclub стало результатом творческого подхода и стремления внести что-то новое в мир квестов. После посещения множества квест-клубов в Москве, у нас возникла идея создать место, где каждый сможет не только пройти квест, но и получить комплексное удовольствие, эмоциональную разгрузку и отдых в компании друзей или семьи.</p>
+                        </div>
+                    </div>
+                </section>
+                <div class="description">
+                    <div class="description__container container-sm">
+                        <h2 class="description__title">В нашем клубе вы сможете:</h2>
+                        <ul class="description__cards">
+                            <li class="description__card description__card--large-mobile">
+                                <h3 class="description__card-caption color-accent">Отметить особые события</h3>
+                                <p class="description__card-text text-block-lg">У нас можно необычно и интересно отпраздновать день рождения или провести встречу с друзьями в компании от 6 до 8 человек.</p>
+                            </li>
+                            <li class="description__card description__card--large-mobile">
+                                <h3 class="description__card-caption color-accent">Насладиться семейным отдыхом</h3>
+                                <p class="description__card-text text-block-lg">Ищете место, где будет интересно всем членам семьи? У нас есть развлечения для людей всех возрастов, чтобы каждый мог найти что-то по душе.</p>
+                            </li>
+                            <li class="description__card description__card--large-mobile">
+                                <h3 class="description__card-caption color-accent">Избежать скуки</h3>
+                                <p class="description__card-text text-block-lg">Мы понимаем, как трудно найти интересные занятия в холодное или дождливое время года. В нашем клубе вы сможете забыть о серых буднях и насладиться активным отдыхом.</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <section class="banner banner--offset-top">
+                    <div class="banner__body banner__body--center">
+                        <div class="banner__container">
+                            <h2 class="banner__title">
+                                <span class="color-accent">В Oreshekclub</span> мы ценим живое общение
+                            </h2>
+                            <div class="banner__desc text-block-lg">
+                                <p>
+                                    Мы уверены, что настоящие эмоции и радость общения с близкими не заменит ни одно виртуальное взаимодействие. У нас вы сможете поразмышлять вместе с друзьями, разделить радость победы и поддержать друг друга в решении непростых задач.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="banner__image banner__image--line-bottom">
+                        <img src="@img/banners/about.jpg" class="cover-image" alt="Баннер">
+                    </div>
+                </section>
+                <div class="services">
+                    <div class="services__container container-sm">
+                        <ul class="services__list">
+                            @@loop('./html/templates/_service.html', './html/json/_services-for-kids.json')
+                        </ul>
+                    </div>
+                </div>
+                @@include('html/_contacts-type-1.html', {})
+            </main>
+            @@include('html/_footer.html', {})
+            @@include('html/_modal.html', {})
+            @@include('html/_js.html', {})
+        </div>
+    </body>
+</html>

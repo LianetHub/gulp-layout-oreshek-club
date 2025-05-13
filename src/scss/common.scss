@@ -316,6 +316,26 @@ body {
 			bottom: 4rem;
 		}
 	}
+	&.promo--about {
+		min-height: rem(380);
+		@media (min-width: $md5) {
+			min-height: rem(505);
+		}
+		@media (min-width: $md4) {
+			min-height: rem(882);
+		}
+		.promo__caption {
+			top: 38%;
+			transform: translateY(-50%);
+			font-size: clamp(3.176rem, 11vw, 15rem);
+			@media (min-width: $md4) {
+				top: 46%;
+			}
+		}
+		&::after {
+			bottom: 0;
+		}
+	}
 	// .promo__container
 	&__container {
 		min-height: 100%;
@@ -487,6 +507,7 @@ body {
 	@media (min-width: $md5) {
 		padding: rem(155) 0 rem(111) 0;
 	}
+
 	// .services__container
 	&__container {
 	}

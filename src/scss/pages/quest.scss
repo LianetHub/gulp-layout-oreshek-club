@@ -135,6 +135,9 @@
 		gap: rem(15);
 		padding: rem(30) 1.38rem rem(30) rem(20);
 		border-radius: rem(30);
+		&:has(.description__card-text) {
+			justify-content: flex-end;
+		}
 		@media (min-width: $md3) {
 			border-radius: rem(40);
 			padding: rem(40) 1.38rem rem(30) rem(30);
@@ -142,6 +145,9 @@
 			&:has(.description__card-hint) {
 				margin-bottom: 0;
 			}
+		}
+		&.description__card--large-mobile {
+			min-height: 20.1875rem;
 		}
 		&.description__card--yellow {
 			background: rgba($color: $yellow, $alpha: 0.11);
@@ -240,6 +246,25 @@
 			& img {
 				min-height: 26.80288rem;
 				object-position: 30% center;
+			}
+		}
+		&.banner__image--line-bottom {
+			&::after {
+				content: "";
+				position: absolute;
+				bottom: -4rem;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				pointer-events: none;
+				z-index: 3;
+				background: url("@img/decor-line-mobile.svg") 75% bottom / 32.875rem auto no-repeat;
+				@media (min-width: $md5) {
+					background: url("@img/decor-line.svg") center bottom / 100% auto no-repeat;
+				}
+				@media (min-width: $md4) {
+					bottom: -13rem;
+				}
 			}
 		}
 	}
