@@ -336,6 +336,17 @@ body {
 			bottom: 0;
 		}
 	}
+	&.promo--corporate {
+		.promo__title {
+			max-width: rem(1100);
+		}
+		.promo__main {
+			margin-bottom: -4.5rem;
+		}
+		&::after {
+			bottom: 0;
+		}
+	}
 	// .promo__container
 	&__container {
 		min-height: 100%;
@@ -609,6 +620,9 @@ body {
 		@media (min-width: $md5) {
 			padding-top: 16rem;
 		}
+	}
+	& + .banner {
+		margin-top: 0;
 	}
 	// .quests__header
 	&__header {

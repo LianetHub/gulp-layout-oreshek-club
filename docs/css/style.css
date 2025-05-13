@@ -1,16 +1,16 @@
 @charset "UTF-8";
 @font-face {
-  font-family: "Heraclito";
-  font-display: swap;
-  src: url("../fonts/Heraclito-Regular.woff2") format("woff2"), url("../fonts/Heraclito-Regular.woff") format("woff");
-  font-weight: 400;
-  font-style: normal;
-}
-@font-face {
   font-family: "icons";
   font-display: swap;
   src: url("../fonts/icons.woff2") format("woff2"), url("../fonts/icons.woff") format("woff");
   font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Inter";
+  font-display: swap;
+  src: url("../fonts/Inter-Bold.woff2") format("woff2"), url("../fonts/Inter-Bold.woff") format("woff");
+  font-weight: 700;
   font-style: normal;
 }
 @font-face {
@@ -21,9 +21,23 @@
   font-style: normal;
 }
 @font-face {
+  font-family: "Inter";
+  font-display: swap;
+  src: url("../fonts/Inter-Italic.woff2") format("woff2"), url("../fonts/Inter-Italic.woff") format("woff");
+  font-weight: 400;
+  font-style: italic;
+}
+@font-face {
   font-family: "Lighthaus";
   font-display: swap;
   src: url("../fonts/Lighthaus-Regular.woff2") format("woff2"), url("../fonts/Lighthaus-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Heraclito";
+  font-display: swap;
+  src: url("../fonts/Heraclito-Regular.woff2") format("woff2"), url("../fonts/Heraclito-Regular.woff") format("woff");
   font-weight: 400;
   font-style: normal;
 }
@@ -32,20 +46,6 @@
   font-display: swap;
   src: url("../fonts/Inter-Regular.woff2") format("woff2"), url("../fonts/Inter-Regular.woff") format("woff");
   font-weight: 400;
-  font-style: normal;
-}
-@font-face {
-  font-family: "Inter";
-  font-display: swap;
-  src: url("../fonts/Inter-Italic.woff2") format("woff2"), url("../fonts/Inter-Italic.woff") format("woff");
-  font-weight: 400;
-  font-style: italic;
-}
-@font-face {
-  font-family: "Inter";
-  font-display: swap;
-  src: url("../fonts/Inter-Bold.woff2") format("woff2"), url("../fonts/Inter-Bold.woff") format("woff");
-  font-weight: 700;
   font-style: normal;
 }
 .form__select::before, .form__checkbox-input:checked + .form__checkbox-text::before, [class^=icon-]:before,
@@ -1136,6 +1136,15 @@ body.lock {
 .promo.promo--about::after {
   bottom: 0;
 }
+.promo.promo--corporate .promo__title {
+  max-width: 68.75rem;
+}
+.promo.promo--corporate .promo__main {
+  margin-bottom: -4.5rem;
+}
+.promo.promo--corporate::after {
+  bottom: 0;
+}
 .promo__container {
   min-height: 100%;
   width: 100%;
@@ -1415,6 +1424,9 @@ body.lock {
   .quests.quests--line {
     padding-top: 16rem;
   }
+}
+.quests + .banner {
+  margin-top: 0;
 }
 .quests__header {
   position: relative;
@@ -2551,6 +2563,21 @@ body.lock {
   position: relative;
   z-index: -1;
 }
+.description__image.description__image--small {
+  margin-bottom: 0;
+}
+@media (min-width: 767.98px) {
+  .description__image.description__image--small {
+    max-width: 66.66%;
+  }
+}
+.description__image.description__image--small::before {
+  content: "";
+  position: absolute;
+  inset: -0.0625rem;
+  background: linear-gradient(to bottom, #000 0%, transparent) 0 0/100% 40% no-repeat, linear-gradient(to top, #000 0%, transparent) 0 bottom/100% 40% no-repeat, linear-gradient(to right, #000 0%, transparent) 0 0/20% 100% no-repeat, linear-gradient(to left, #000 0%, transparent) 100% 0/20% 100% no-repeat;
+  pointer-events: none;
+}
 .description__image img {
   width: 100%;
 }
@@ -2660,7 +2687,7 @@ body.lock {
     padding: 2.5rem 1.38rem 1.875rem 1.875rem;
     margin-bottom: 8.125rem;
   }
-  .description__card:has(.description__card-hint) {
+  .description__card:has(.description__card-hint), .description__card.description__card--large {
     margin-bottom: 0;
   }
 }
@@ -2699,6 +2726,22 @@ body.lock {
   font-weight: 400;
   line-height: 150%;
   margin-bottom: 4.69rem;
+}
+.description__columns {
+  margin-top: 2.5625rem;
+  text-align: left;
+}
+@media (min-width: 767.98px) {
+  .description__columns {
+    columns: 2;
+    column-gap: 2.5625rem;
+  }
+}
+.description__columns p {
+  break-inside: avoid;
+}
+.description__columns p:not(:last-child) {
+  margin-bottom: 1.5em;
 }
 
 .banner {
