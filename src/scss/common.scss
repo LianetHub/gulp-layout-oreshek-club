@@ -274,18 +274,37 @@ body {
 		}
 	}
 	&.promo--birthday {
-		min-height: rem(505);
+		min-height: rem(513);
+
 		@media (min-width: $md4) {
 			min-height: rem(940);
+			margin-bottom: -4.5rem;
 		}
 		.promo__container {
 			@media (min-width: $md4) {
 				justify-content: center;
 			}
+			&::before {
+				content: "";
+				position: absolute;
+				background: url("@img/balloon.png") center / cover no-repeat;
+				width: 4.375rem;
+				height: 6.64063rem;
+				top: 15%;
+				left: 7.5%;
+				@media (min-width: $md4) {
+					top: 10%;
+					left: 5%;
+					width: 10.5rem;
+					height: 15.9375rem;
+				}
+			}
 		}
 		.promo__main {
+			padding-bottom: rem(40);
 			@media (min-width: $md4) {
 				padding-top: rem(100);
+				padding-bottom: 0;
 			}
 		}
 		&::after {
@@ -667,6 +686,14 @@ body {
 	// .quests__item
 	&__item {
 	}
+	// .quests__subtitle
+	&__subtitle {
+		margin-top: 4.25rem;
+		max-width: 53.8125rem;
+		text-align: center;
+		margin-left: auto;
+		margin-right: auto;
+	}
 }
 
 .quests-card {
@@ -909,9 +936,16 @@ body {
 }
 
 .steps {
+	position: relative;
+	z-index: 2;
 	padding: 2.25rem 0;
 	@media (min-width: $md4) {
 		padding: 3.5rem 0;
+	}
+	& + .banner.banner--offset-top {
+		@media (min-width: $md4) {
+			margin-top: -16rem;
+		}
 	}
 	// .steps__container
 	&__container {
@@ -922,6 +956,7 @@ body {
 		flex-direction: column;
 		gap: rem(35);
 		@media (min-width: $md3) {
+			gap: rem(24);
 			align-items: flex-start;
 			flex-direction: row;
 		}
@@ -974,6 +1009,11 @@ body {
 	}
 	// .steps__caption
 	&__caption {
+		br {
+			@media (max-width: $md5) {
+				display: none;
+			}
+		}
 	}
 	// .steps__desc
 	&__desc {
@@ -1050,6 +1090,22 @@ body {
 			}
 		}
 	}
+	&.gallery--birthday {
+		.gallery__container {
+			position: relative;
+			&::before {
+				content: "";
+				position: absolute;
+				bottom: -6rem;
+				right: -6rem;
+				width: 10.5rem;
+				height: 15.9375rem;
+				z-index: 4;
+				background: url("@img/balloon.png") 0 0 / cover no-repeat;
+				pointer-events: none;
+			}
+		}
+	}
 	// .gallery__container
 	&__container {
 	}
@@ -1118,6 +1174,12 @@ body {
 	padding: 7.5rem 0 8.5rem;
 	@media (min-width: $md4) {
 		padding: 7.5rem 0 6.5rem;
+	}
+	& + .quests {
+		margin-top: 1rem;
+		@media (min-width: $md4) {
+			margin-top: 9rem;
+		}
 	}
 	// .videos__container
 	&__container {

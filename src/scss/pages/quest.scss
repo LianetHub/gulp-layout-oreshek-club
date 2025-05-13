@@ -4,6 +4,43 @@
 	@media (min-width: $md4) {
 		padding: 4rem 0;
 	}
+	&.description--line {
+		&::after {
+			content: "";
+			position: absolute;
+			top: -2rem;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			pointer-events: none;
+			z-index: -1;
+			background: url("@img/decor-line-mobile.svg") 75% top / 32.875rem auto no-repeat;
+			@media (min-width: $md5) {
+				background: url("@img/decor-line.svg") center top / 100% auto no-repeat;
+			}
+			@media (min-width: $md4) {
+				top: 3rem;
+			}
+		}
+	}
+	// .description__image
+	&__image {
+		max-width: 90%;
+		margin-top: -25%;
+		margin-bottom: -15%;
+		position: relative;
+		z-index: -1;
+		& img {
+			width: 100%;
+		}
+		&::before {
+			content: "";
+			position: absolute;
+			inset: rem(-1);
+			background: linear-gradient(to bottom, $black 0%, transparent) 0 0 / 100% 30% no-repeat, linear-gradient(to top, $black 0%, transparent) 0 bottom / 100% 30% no-repeat;
+			pointer-events: none;
+		}
+	}
 	// .description__container
 	&__container {
 	}
@@ -106,6 +143,9 @@
 				margin-bottom: 0;
 			}
 		}
+		&.description__card--yellow {
+			background: rgba($color: $yellow, $alpha: 0.11);
+		}
 	}
 	// .description__card-caption
 	&__card-caption {
@@ -152,6 +192,13 @@
 	position: relative;
 	margin-top: 5rem;
 	margin-bottom: 5rem;
+	display: flex;
+	flex-direction: column;
+	&.banner--offset-top {
+		&:has(.banner__image--large-mobile) {
+			margin-top: -4rem;
+		}
+	}
 	@media (min-width: $md4) {
 		margin-bottom: 7rem;
 		margin-top: 10rem;
@@ -170,12 +217,40 @@
 				linear-gradient(to right, $black 0%, transparent) 0 0 / 10% 100% no-repeat, linear-gradient(to left, $black 0%, transparent) 100% 0 / 10% 100% no-repeat;
 			pointer-events: none;
 		}
+		&.banner__image--line {
+			&::after {
+				content: "";
+				position: absolute;
+				top: -6rem;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				pointer-events: none;
+				z-index: 3;
+				background: url("@img/decor-line-yellow-mobile.svg") 75% top / 32.875rem auto no-repeat;
+				@media (min-width: $md5) {
+					background: url("@img/decor-line-yellow.svg") center top / 100% auto no-repeat;
+				}
+				@media (min-width: $md4) {
+					top: -13rem;
+				}
+			}
+		}
+		&.banner__image--large-mobile {
+			& img {
+				min-height: 26.80288rem;
+				object-position: 30% center;
+			}
+		}
 	}
 	// .banner__body
 	&__body {
 		position: relative;
 		z-index: 3;
 		text-align: center;
+		&.banner__body--center {
+			order: 1;
+		}
 		@media (min-width: $md4) {
 			position: absolute;
 			top: 0;
@@ -188,6 +263,12 @@
 			&.banner__body--start {
 				align-items: flex-start;
 			}
+			&.banner__body--center {
+				align-items: center;
+				.banner__title {
+					max-width: rem(940);
+				}
+			}
 		}
 	}
 	// .banner__container
@@ -197,6 +278,10 @@
 	&__title {
 		max-width: 48.75rem;
 		margin: 0 auto;
+	}
+	// .banner__btn
+	&__btn {
+		margin-top: rem(30);
 	}
 	.description {
 		position: relative;

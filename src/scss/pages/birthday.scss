@@ -1,0 +1,72 @@
+.birthday {
+	padding: rem(55) em(0) rem(16) em(0);
+	@media (min-width: $md4) {
+		padding: em(0) em(0) rem(16) em(0);
+	}
+	// .birthday__container
+	&__container {
+	}
+	// .birthday__title
+	&__title {
+		display: none;
+		@media (min-width: $md4) {
+			display: block;
+			text-align: center;
+			max-width: 58.8125rem;
+			margin-left: auto;
+			margin-right: auto;
+		}
+	}
+	// .birthday__cards
+	&__cards {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		gap: rem(15);
+		grid-auto-rows: 1fr;
+		@media (min-width: $md4) {
+			margin-top: 3rem;
+		}
+		@media (min-width: $md3) {
+			margin-top: 5rem;
+			gap: 2.5rem;
+			grid-template-columns: repeat(4, 1fr);
+		}
+	}
+	// .birthday__card
+	&__card {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+
+		background: $glass;
+		backdrop-filter: blur(rem(15));
+		-webkit-backdrop-filter: blur(rem(15));
+		border-radius: 1.875rem;
+		padding: 1.56rem 1.25rem;
+		gap: 2.56rem;
+		@media (min-width: $md4) {
+			gap: 1rem;
+			padding: 1.56rem 1.88rem 2rem;
+			border-radius: 2.5rem;
+		}
+	}
+	// .birthday__card-icon
+	&__card-icon {
+		margin-left: auto;
+
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 2.1875rem;
+		height: 2.1875rem;
+		@media (min-width: $md4) {
+			width: 3.125rem;
+			height: 3.125rem;
+		}
+	}
+	// .birthday__card-text
+	&__card-text {
+		font-family: $font-lighthaus;
+		hyphens: auto;
+	}
+}

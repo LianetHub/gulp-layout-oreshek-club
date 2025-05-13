@@ -267,7 +267,7 @@ h4,
 	opacity: 0.8;
 	background: radial-gradient(50% 50% at 50% 50%, #5eece2 0%, rgba(5, 5, 5, 0.01) 100%);
 	@media (max-width: $md4) {
-		zoom: 0.5;
+		zoom: 0.75;
 		&:nth-child(even) {
 			display: none;
 		}
