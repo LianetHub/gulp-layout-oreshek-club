@@ -1,9 +1,6 @@
 .rules {
 	padding: 0 0 10rem;
-	margin-top: -8rem;
-	@media (min-width: $md4) {
-		margin-top: -4rem;
-	}
+
 	// .rules__container
 	&__container {
 	}
@@ -23,6 +20,30 @@
 			&:not(:last-child) {
 				margin-bottom: 1.5rem;
 			}
+		}
+	}
+}
+
+.reqs {
+	padding: 4rem 0 5rem;
+	@media (min-width: $md4) {
+		padding: 12.75rem 0 2rem;
+	}
+	// .reqs__container
+	&__container {
+	}
+	// .reqs__title
+	&__title {
+		display: none;
+		@media (min-width: $md4) {
+			display: block;
+			text-align: center;
+		}
+	}
+	// .reqs__list
+	&__list {
+		@media (min-width: $md4) {
+			margin-top: 3.75rem;
 		}
 	}
 }

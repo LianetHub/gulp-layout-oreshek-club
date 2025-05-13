@@ -140,6 +140,10 @@ body {
 	}
 	&.promo--rules {
 		min-height: rem(505);
+		margin-bottom: -8rem;
+		@media (min-width: $md4) {
+			margin-bottom: -4rem;
+		}
 		@media (min-width: $md3) {
 			min-height: rem(882);
 		}
@@ -819,5 +823,81 @@ body {
 	// .contacts__item-place
 	&__item-place {
 		margin-top: 0.15rem;
+	}
+}
+
+.steps {
+	padding: 2.25rem 0;
+	@media (min-width: $md4) {
+		padding: 3.5rem 0;
+	}
+	// .steps__container
+	&__container {
+	}
+	// .steps__body
+	&__body {
+		display: flex;
+		flex-direction: column;
+		gap: rem(35);
+		@media (min-width: $md3) {
+			align-items: flex-start;
+			flex-direction: row;
+		}
+	}
+	// .steps__title
+	&__title {
+		text-align: center;
+		@media (min-width: $md3) {
+			text-align: left;
+			flex: 1 1 auto;
+			position: sticky;
+			top: calc($header + 1rem);
+		}
+	}
+	// .steps__list
+	&__list {
+		margin-left: auto;
+		@media (min-width: $md3) {
+			flex: 0 0 60%;
+		}
+	}
+	// .steps__item
+	&__item {
+		padding-left: rem(42);
+		position: relative;
+		&::after {
+			content: "";
+			position: absolute;
+			top: rem(-22.5);
+			left: rem(-22.5);
+			width: 2.8125rem;
+			height: 2.8125rem;
+			background: radial-gradient(50% 50% at 50% 50%, #efcc4f 28.37%, rgba(239, 204, 79, 0) 100%);
+		}
+		&:not(:last-child) {
+			&::before {
+				content: "";
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: rem(3);
+				height: 100%;
+				background: $yellow;
+			}
+			padding-bottom: 5rem;
+			@media (min-width: $md4) {
+				padding-bottom: 5.5rem;
+			}
+		}
+	}
+	// .steps__caption
+	&__caption {
+	}
+	// .steps__desc
+	&__desc {
+		margin-top: rem(15);
+		@media (min-width: $md4) {
+			margin-top: rem(30);
+		}
 	}
 }

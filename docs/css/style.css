@@ -1,5 +1,12 @@
 @charset "UTF-8";
 @font-face {
+  font-family: "Heraclito";
+  font-display: swap;
+  src: url("../fonts/Heraclito-Regular.woff2") format("woff2"), url("../fonts/Heraclito-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
   font-family: "icons";
   font-display: swap;
   src: url("../fonts/icons.woff2") format("woff2"), url("../fonts/icons.woff") format("woff");
@@ -14,17 +21,17 @@
   font-style: normal;
 }
 @font-face {
-  font-family: "Heraclito";
+  font-family: "Inter";
   font-display: swap;
-  src: url("../fonts/Heraclito-Regular.woff2") format("woff2"), url("../fonts/Heraclito-Regular.woff") format("woff");
+  src: url("../fonts/Inter-Regular.woff2") format("woff2"), url("../fonts/Inter-Regular.woff") format("woff");
   font-weight: 400;
   font-style: normal;
 }
 @font-face {
-  font-family: "Inter";
+  font-family: "Lighthaus";
   font-display: swap;
-  src: url("../fonts/Inter-Bold.woff2") format("woff2"), url("../fonts/Inter-Bold.woff") format("woff");
-  font-weight: 700;
+  src: url("../fonts/Lighthaus-Regular.woff2") format("woff2"), url("../fonts/Lighthaus-Regular.woff") format("woff");
+  font-weight: 400;
   font-style: normal;
 }
 @font-face {
@@ -37,15 +44,8 @@
 @font-face {
   font-family: "Inter";
   font-display: swap;
-  src: url("../fonts/Inter-Regular.woff2") format("woff2"), url("../fonts/Inter-Regular.woff") format("woff");
-  font-weight: 400;
-  font-style: normal;
-}
-@font-face {
-  font-family: "Lighthaus";
-  font-display: swap;
-  src: url("../fonts/Lighthaus-Regular.woff2") format("woff2"), url("../fonts/Lighthaus-Regular.woff") format("woff");
-  font-weight: 400;
+  src: url("../fonts/Inter-Bold.woff2") format("woff2"), url("../fonts/Inter-Bold.woff") format("woff");
+  font-weight: 700;
   font-style: normal;
 }
 .form__select::before, .form__checkbox-input:checked + .form__checkbox-text::before, [class^=icon-]:before,
@@ -846,6 +846,12 @@ body.lock {
 }
 .promo.promo--rules {
   min-height: 31.5625rem;
+  margin-bottom: -8rem;
+}
+@media (min-width: 767.98px) {
+  .promo.promo--rules {
+    margin-bottom: -4rem;
+  }
 }
 @media (min-width: 991.98px) {
   .promo.promo--rules {
@@ -1533,6 +1539,83 @@ body.lock {
 }
 .contacts__item-place {
   margin-top: 0.15rem;
+}
+
+.steps {
+  padding: 2.25rem 0;
+}
+@media (min-width: 767.98px) {
+  .steps {
+    padding: 3.5rem 0;
+  }
+}
+.steps__body {
+  display: flex;
+  flex-direction: column;
+  gap: 2.1875rem;
+}
+@media (min-width: 991.98px) {
+  .steps__body {
+    align-items: flex-start;
+    flex-direction: row;
+  }
+}
+.steps__title {
+  text-align: center;
+}
+@media (min-width: 991.98px) {
+  .steps__title {
+    text-align: left;
+    flex: 1 1 auto;
+    position: sticky;
+    top: calc(var(--header-height, 11.375rem) + 1rem);
+  }
+}
+.steps__list {
+  margin-left: auto;
+}
+@media (min-width: 991.98px) {
+  .steps__list {
+    flex: 0 0 60%;
+  }
+}
+.steps__item {
+  padding-left: 2.625rem;
+  position: relative;
+}
+.steps__item::after {
+  content: "";
+  position: absolute;
+  top: -1.40625rem;
+  left: -1.40625rem;
+  width: 2.8125rem;
+  height: 2.8125rem;
+  background: radial-gradient(50% 50% at 50% 50%, #efcc4f 28.37%, rgba(239, 204, 79, 0) 100%);
+}
+.steps__item:not(:last-child) {
+  padding-bottom: 5rem;
+}
+.steps__item:not(:last-child)::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0.1875rem;
+  height: 100%;
+  background: #fecd19;
+}
+@media (min-width: 767.98px) {
+  .steps__item:not(:last-child) {
+    padding-bottom: 5.5rem;
+  }
+}
+.steps__desc {
+  margin-top: 0.9375rem;
+}
+@media (min-width: 767.98px) {
+  .steps__desc {
+    margin-top: 1.875rem;
+  }
 }
 
 .header {
@@ -2270,12 +2353,6 @@ body.lock {
 
 .rules {
   padding: 0 0 10rem;
-  margin-top: -8rem;
-}
-@media (min-width: 767.98px) {
-  .rules {
-    margin-top: -4rem;
-  }
 }
 .rules__list {
   padding-left: 1em;
@@ -2297,6 +2374,29 @@ body.lock {
 }
 .rules__list li:not(:last-child) {
   margin-bottom: 1.5rem;
+}
+
+.reqs {
+  padding: 4rem 0 5rem;
+}
+@media (min-width: 767.98px) {
+  .reqs {
+    padding: 12.75rem 0 2rem;
+  }
+}
+.reqs__title {
+  display: none;
+}
+@media (min-width: 767.98px) {
+  .reqs__title {
+    display: block;
+    text-align: center;
+  }
+}
+@media (min-width: 767.98px) {
+  .reqs__list {
+    margin-top: 3.75rem;
+  }
 }
 
 .policy {

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ru">
+    @@include('html/_head.html', {
+    'title': 'Оплата'
+    })
+    <body>
+        <div class="wrapper">
+            @@include('html/_header.html', {})
+            <main class="page">
+                <section class="promo promo--rules" style="background-image: url('@img/promo/rules.jpg');">
+                    <div class="promo__container">
+                        <h1 class="promo__caption">Оплата</h1>
+                        <div class="promo__overlay">
+                            <img src="@img/promo/rules-overlay.png" class="cover-image" alt="Промо изображение">
+                        </div>
+                    </div>
+                </section>
+                <section class="steps">
+                    <div class="steps__container container-sm">
+                        <div class="steps__body">
+                            <h2 class="steps__title">Как оплатить?</h2>
+                            <ul class="steps__list">
+                                <div class="steps__item">
+                                    <h3 class="steps__caption color-accent">Подтверждение</h3>
+                                    <p class="steps__desc text-block-lg">Для подтверждения бронирования любого Квеста или Антикафе необходимо, оплатить сумму, не менее 50% от «базовой стоимости» Квеста или Антикафе указанной на сайте ORESHEKCLUB в разделе «Расписание» - https://oreshekclub.ru/schedule/</p>
+                                </div>
+                                <div class="steps__item">
+                                    <h3 class="steps__caption color-accent">Стоимость</h3>
+                                    <p class="steps__desc text-block-lg">«Базовая стоимость» - Квеста (до 4 участников включительно), Антикафе (до 18 человек- Мытищи , до 12 - Королев) обозначена на сайте ORESHEKCLUB https://oreshekclub.ru/schedule/ и не включает в себя дополнительных участников в Квесте и в Антикафе.</p>
+                                </div>
+                                <div class="steps__item">
+                                    <h3 class="steps__caption color-accent">Доплата</h3>
+                                    <p class="steps__desc text-block-lg">Стоимость доплаты за дополнительных участников Вы всегда можете узнать по телефону, заявленному на сайте ORESHEKCLUB или ознакомится с полным прейскурантом находящимся непосредственно в клубе ORESHEKCLUB.</p>
+                                </div>
+                                <div class="steps__item">
+                                    <h3 class="steps__caption color-accent">Как платить?</h3>
+                                    <p class="steps__desc text-block-lg">Для оплаты услуги банковской картой при оформлении заказа в интернет-магазине выберите способ оплаты: банковской картой. При оплате заказа банковской картой, обработка платежа происходит на авторизационной странице Банка, где Вам необходимо ввести данные Вашей банковской карты:</p>
+                                </div>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+                <section class="reqs">
+                    <div class="reqs__container container-sm">
+                        <h2 class="reqs__title color-accent">Реквизиты организации</h2>
+                        <ul class="reqs__list text-block-lg">
+                            <li><strong>Название компании:</strong> ИП Короткий Вадим Михайлович «Oreshekclub»</li>
+                            <li><strong>ИНН/ЕГРИП:</strong> 772822354218/306770000371153</li>
+                            <li><strong>Телефон:</strong> 8(977)5526013</li>
+                            <li><strong>Режим работы:</strong> будни с 11:00 до 21:00; выходные с 10:00 до 21:00</li>
+                            <li><strong>Почтовый адрес:</strong> 107564,Москва,ул.3-я Гражданская,д.3а, пом.16, ком. 17</li>
+                            <li><strong>Фактический адрес:</strong> М.О., г.Мытищи, проезд 497, владение 1, строение 1</li>
+                            <li><strong>Юридический адрес:</strong> 107564,Москва,ул.3-я Гражданская,д.3а, пом.16, ком. 17</li>
+                            <li><strong>e-mail:</strong> <a href="mailto:oreshekclub@yandex.ru">oreshekclub@yandex.ru</a></li>
+                        </ul>
+                    </div>
+                </section>
+                @@include('html/_contacts-type-3.html', {})
+            </main>
+            @@include('html/_footer.html', {})
+            @@include('html/_modal.html', {})
+            @@include('html/_modal-booking.html', {})
+            @@include('html/_js.html', {})
+        </div>
+    </body>
+</html>
