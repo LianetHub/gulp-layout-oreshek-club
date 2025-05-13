@@ -1,0 +1,34 @@
+[
+    {
+        "url": "trash-box.html",
+        "images": "@img/quests/trash-box.jpg",
+        "title": "Трэш-коробка",
+        "description": "Увлекательная игра с элементом неожиданности.",
+        "users": "от 4",
+        "price": "от 2000 ₽"
+    },
+    {
+        "url": "mafia.html",
+        "images": "@img/quests/mafia.jpg",
+        "title": "Мафия",
+        "description": "Мафия - игра для времен и возрастов!",
+        "users": "от 6",
+        "price": "4000 ₽"
+    },
+    {
+        "url": "bunker.html",
+        "images": "@img/quests/bunker.jpg",
+        "title": "Бункер",
+        "description": "Дискуссионная игра о выживании после глобальной катастрофы",
+        "users": "2-8",
+        "price": "6000 ₽"
+    },
+    {
+        "url": "killer.html",
+        "images": "@img/quests/killer.jpg",
+        "title": "Киллер",
+        "description": "Проверка на ловкость, которая разнообразит досуг любой компании",
+        "users": "от 4",
+        "price": "4000 ₽"
+    }
+]

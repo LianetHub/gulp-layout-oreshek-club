@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ru">
+    @@include('html/_head.html', {
+    'title': 'Трэш-коробка'
+    })
+    <body>
+        <div class="wrapper">
+            @@include('html/_header.html', {})
+            <main class="page">
+                <section class="promo promo--quest" style="background-image: url('@img/promo/bunker.jpg');">
+                    <div class="promo__container container-sm">
+                        <div class="promo__offer">
+                            <h1 class="promo__offer-title h3">
+                                <span class="color-accent">Трэш-коробка</span> - игра на ощупь&nbsp;с неожиданными сюрпризами!
+                            </h1>
+                            <div class="promo__offer-subtitle text-block">
+                                Веселая игра с ведущим
+                            </div>
+                            <div class="promo__offer-stats text-block">
+                                <div class="promo__offer-stat icon-users">от 4</div>
+                                <div class="promo__offer-stat icon-currency">2000 ₽/4000 ₽</div>
+                                <div class="promo__offer-stat icon-criminal">от 7</div>
+                                <div class="promo__offer-stat icon-time">30 мин/60 мин.</div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="description">
+                    <div class="description__container container-sm">
+                        <h2 class="description__title"><span class="color-accent">Трэш-коробка</span> это...</h2>
+                        <div class="description__body text-block-lg">
+                            <p>«Трэш-коробка» или «Кажется, нащупал» – это увлекательная игра с элементом неожиданности, где участники соревнуются, чтобы на ощупь угадать, что скрывается внутри коробки.</p>
+                            <p>Ведущий может положить в коробку абсолютно любой предмет, который вызовет самые разные эмоции – от смеха до легкого шока!</p>
+
+                        </div>
+                        <div class="description__gallery swiper">
+                            <div class="swiper-wrapper">
+                                <a href="@img/trash-box/01.png" data-fancybox="quset-gallery" class="description__gallery-item swiper-slide">
+                                    <img src="@img/trash-box/01.png" class="cover-image" alt="Фото галлереи">
+                                </a>
+                                <a href="@img/trash-box/01.png" data-fancybox="quset-gallery" class="description__gallery-item swiper-slide">
+                                    <img src="@img/trash-box/01.png" class="cover-image" alt="Фото галлереи">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="steps">
+                    <div class="steps__container container-sm">
+                        <div class="steps__body">
+                            <h2 class="steps__title">Правила игры</h2>
+                            <ul class="steps__list">
+                                <li class="steps__item">
+                                    <h3 class="steps__caption color-accent">01</h3>
+                                    <p class="steps__desc text-block-lg">Ведущий готовит ящик с различными неожиданными предметами.</p>
+                                </li>
+                                <li class="steps__item">
+                                    <h3 class="steps__caption color-accent">02</h3>
+                                    <p class="steps__desc text-block-lg">Игроки по очереди просовывают руки в ящик и пытаются угадать, что там находится.</p>
+                                </li>
+                                <li class="steps__item">
+                                    <h3 class="steps__caption color-accent">03</h3>
+                                    <p class="steps__desc text-block-lg">Предметы могут быть разными – от забавных до тех, которые вызывают легкое смущение. Подготовьтесь к взрыву эмоций!</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+                <section class="banner">
+                    <div class="banner__body banner__body--center">
+                        <div class="banner__container">
+                            <h2 class="banner__title">
+                                Бронируйте игру в «Трэш-коробку» прямо сейчас и <span class="color-accent">погрузитесь в мир неожиданных сюрпризов!</span>
+                            </h2>
+                            <a href="" class="banner__btn btn btn-secondary">Забронировать</a>
+                        </div>
+                    </div>
+                    <div class="banner__image">
+                        <img src="@img/banners/trash-box.jpg" class="cover-image" alt="Баннер">
+                    </div>
+                </section>
+                <div class="quests quests--line">
+                    <div class="quests__body">
+                        <div class="quests__container container-sm">
+                            <h2 class="quests__caption">Другие игры с ведущим</h2>
+                            <ul class="quests__list">
+                                @@loop('./html/templates/_quest.html', [{
+                                "url": "bunker.html",
+                                "images": "@img/quests/bunker.jpg",
+                                "title": "Бункер",
+                                "description": "Дискуссионная игра о выживании после глобальной катастрофы",
+                                "users": "2-8",
+                                "price": "6000 ₽"
+                                },
+                                {
+                                "url": "mafia.html",
+                                "images": "@img/quests/mafia.jpg",
+                                "title": "Мафия",
+                                "description": "Мафия - игра для времен и возрастов!",
+                                "users": "от 6",
+                                "price": "4000 ₽"
+                                },
+                                {
+                                "url": "killer.html",
+                                "images": "@img/quests/killer.jpg",
+                                "title": "Киллер",
+                                "description": "Проверка на ловкость, которая разнообразит досуг любой компании",
+                                "users": "от 4",
+                                "price": "4000 ₽"
+                                }])
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                @@include('html/_contacts-type-5.html', {})
+            </main>
+            @@include('html/_footer.html', {})
+            @@include('html/_modal.html', {})
+            @@include('html/_js.html', {})
+        </div>
+    </body>
+</html>

@@ -906,6 +906,9 @@ body.lock {
 .promo.promo--404 .promo__container {
   justify-content: center;
 }
+.promo.promo--games .promo__container {
+  justify-content: center;
+}
 .promo.promo--rules {
   min-height: 31.5625rem;
   margin-bottom: -8rem;
@@ -1229,6 +1232,7 @@ body.lock {
 }
 .promo__offer-subtitle {
   margin-top: 0.79rem;
+  max-width: 22rem;
 }
 @media (min-width: 767.98px) {
   .promo__offer-subtitle {
@@ -1353,6 +1357,37 @@ body.lock {
 @media (min-width: 575.98px) {
   .quests {
     padding: 0 0 15rem 0;
+  }
+}
+.quests.quests--line {
+  padding-top: 9rem;
+  position: relative;
+  z-index: 1;
+}
+.quests.quests--line::after {
+  content: "";
+  position: absolute;
+  top: -2rem;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 3;
+  background: url("../img/decor-line-mobile.svg") 75% top/32.875rem auto no-repeat;
+}
+@media (min-width: 575.98px) {
+  .quests.quests--line::after {
+    background: url("../img/decor-line.svg") center top/100% auto no-repeat;
+  }
+}
+@media (min-width: 767.98px) {
+  .quests.quests--line::after {
+    top: -13rem;
+  }
+}
+@media (min-width: 575.98px) {
+  .quests.quests--line {
+    padding-top: 16rem;
   }
 }
 .quests__header {
@@ -1490,6 +1525,39 @@ body.lock {
   text-align: center;
   margin-left: auto;
   margin-right: auto;
+}
+.quests__decor {
+  display: none;
+}
+@media (min-width: 991.98px) {
+  .quests__decor {
+    display: block;
+    grid-column: span 2;
+    align-self: center;
+    margin-left: auto;
+    position: relative;
+  }
+  .quests__decor::before {
+    content: "";
+    position: absolute;
+    inset: -0.0625rem;
+    background: linear-gradient(to bottom, #000 0%, transparent) 0 0/100% 30% no-repeat, linear-gradient(to top, #000 0%, transparent) 0 bottom/100% 30% no-repeat, linear-gradient(to right, #000 0%, transparent) 0 0/10% 100% no-repeat, linear-gradient(to left, #000 0%, transparent) 100% 0/10% 100% no-repeat;
+    pointer-events: none;
+  }
+}
+@media (min-width: 1199.98px) {
+  .quests__decor {
+    max-width: 40.625rem;
+  }
+}
+.quests__caption {
+  text-align: center;
+  margin-bottom: 3.125rem;
+}
+@media (min-width: 767.98px) {
+  .quests__caption {
+    margin-bottom: 5rem;
+  }
 }
 
 .quests-card {
@@ -1812,6 +1880,10 @@ body.lock {
   .steps__desc {
     margin-top: 1.875rem;
   }
+}
+.steps__btn {
+  margin-top: 1.8125rem;
+  min-width: 14.5rem;
 }
 
 .feedback {
@@ -2673,6 +2745,17 @@ body.lock {
 .banner__title {
   max-width: 48.75rem;
   margin: 0 auto;
+}
+.banner__desc {
+  max-width: 47.75rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+.banner__desc p:not(:last-child) {
+  margin-bottom: 1.5rem;
+}
+.banner__desc:not(:first-child) {
+  margin-top: 1.25rem;
 }
 .banner__btn {
   margin-top: 1.875rem;

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ru">
+    @@include('html/_head.html', {
+    'title': 'Мафия'
+    })
+    <body>
+        <div class="wrapper">
+            @@include('html/_header.html', {})
+            <main class="page">
+                <section class="promo promo--quest" style="background-image: url('@img/promo/mafia.jpg');">
+                    <div class="promo__container container-sm">
+                        <div class="promo__offer">
+                            <h1 class="promo__offer-title h3">
+                                <span class="color-accent">Мафия</span> - игра для всех <br>
+                                времен и возрастов!
+                            </h1>
+                            <div class="promo__offer-subtitle text-block">
+                                Мировая классика игр
+                            </div>
+                            <div class="promo__offer-stats text-block">
+                                <div class="promo__offer-stat icon-users">от 6</div>
+                                <div class="promo__offer-stat icon-currency">4000 ₽</div>
+                                <div class="promo__offer-stat icon-criminal">от 10</div>
+                                <div class="promo__offer-stat icon-time">60 мин</div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="description">
+                    <div class="description__container container-sm">
+                        <h2 class="description__title color-accent">Мафия</h2>
+                        <div class="description__body text-block-lg">
+                            <p>
+                                День сменятся ночью, и, пока все мирные жители крепко спят, наступает самое жуткое время для совершения преступления. Каждое утро - новая жертва, а, может быть, и не одна... Вами движет страх и месть!
+                            </p>
+                        </div>
+                        <div class="description__gallery swiper">
+                            <div class="swiper-wrapper">
+                                <a href="@img/mafia/01.png" data-fancybox="quset-gallery" class="description__gallery-item swiper-slide">
+                                    <img src="@img/mafia/01.png" class="cover-image" alt="Фото галлереи">
+                                </a>
+                                <a href="@img/mafia/02.png" data-fancybox="quset-gallery" class="description__gallery-item swiper-slide">
+                                    <img src="@img/mafia/02.png" class="cover-image" alt="Фото галлереи">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="steps">
+                    <div class="steps__container container-sm">
+                        <div class="steps__body">
+                            <h2 class="steps__title">Правила игры</h2>
+                            <ul class="steps__list">
+                                <li class="steps__item">
+                                    <h3 class="steps__caption color-accent">01</h3>
+                                    <p class="steps__desc text-block-lg">Ведущий всегда прав</p>
+                                </li>
+                                <li class="steps__item">
+                                    <h3 class="steps__caption color-accent">Ход Игры</h3>
+                                    <p class="steps__desc text-block-lg">В мирном городе появляется мафия, и честные жители больше не могут спать спокойно: им нужно вычислить кто есть кто и выгнать всю мафию, чтобы спастись. Если им не удастся это сделать, мафия захватит город, и мирные жители будут обречены.</p>
+                                </li>
+                                <li class="steps__item">
+                                    <h3 class="steps__caption color-accent">Подробности</h3>
+                                    <p class="steps__desc text-block-lg">С полными правилами можно ознакомиться тут</p>
+                                    <a href="mafia-rules.html" class="steps__btn btn btn-primary">Правила</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+                <section class="banner">
+                    <div class="banner__body banner__body--center">
+                        <div class="banner__container">
+                            <h2 class="banner__title">
+                                Миф - в мафию играют только взрослые
+                            </h2>
+                            <div class="banner__desc text-block-lg">
+                                <p>Мы всегда рады новичкам и командам смешанных возрастов!</p>
+                                <p>Игра уже будет интересна для 10 летних мафиозий))</p>
+                                <p>Надев маски и уснув на пару минут, Вы окунетесь в атмосферу Чикаго 30-ых годов. Там, где днем царит тишина и спокойствие, а каждую ночь происходят тайные преступления, похищения и даже убийства!</p>
+                                <p>ORESHEKCLUB один из немногих маф клубов, где работают умелые ведущие для гостей без опыта игры и детей!</p>
+                            </div>
+                            <a href="" class="banner__btn btn btn-secondary">Забронировать</a>
+                        </div>
+                    </div>
+                    <div class="banner__image">
+                        <img src="@img/banners/mafia.jpg" class="cover-image" alt="Баннер">
+                    </div>
+                </section>
+                <div class="quests quests--line">
+                    <div class="quests__body">
+                        <div class="quests__container container-sm">
+                            <h2 class="quests__caption">Другие игры с ведущим</h2>
+                            <ul class="quests__list">
+                                @@loop('./html/templates/_quest.html', [{
+                                "url": "trash-box.html",
+                                "images": "@img/quests/trash-box.jpg",
+                                "title": "Трэш-коробка",
+                                "description": "Увлекательная игра с элементом неожиданности.",
+                                "users": "от 4",
+                                "price": "от 2000 ₽"
+                                },
+                                {
+                                "url": "killer.html",
+                                "images": "@img/quests/killer.jpg",
+                                "title": "Киллер",
+                                "description": "Проверка на ловкость, которая разнообразит досуг любой компании",
+                                "users": "от 4",
+                                "price": "4000 ₽"
+                                },
+                                {
+                                "url": "bunker.html",
+                                "images": "@img/quests/bunker.jpg",
+                                "title": "Бункер",
+                                "description": "Дискуссионная игра о выживании после глобальной катастрофы",
+                                "users": "2-8",
+                                "price": "6000 ₽"
+                                }])
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                @@include('html/_contacts-type-5.html', {})
+            </main>
+            @@include('html/_footer.html', {})
+            @@include('html/_modal.html', {})
+            @@include('html/_js.html', {})
+        </div>
+    </body>
+</html>

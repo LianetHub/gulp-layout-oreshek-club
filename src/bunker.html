@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="ru">
+    @@include('html/_head.html', {
+    'title': 'Мафия'
+    })
+    <body>
+        <div class="wrapper">
+            @@include('html/_header.html', {})
+            <main class="page">
+                <section class="promo promo--quest" style="background-image: url('@img/promo/bunker.jpg');">
+                    <div class="promo__container container-sm">
+                        <div class="promo__offer">
+                            <h1 class="promo__offer-title h3">
+                                <span class="color-accent">Бункер</span> - испытай свои силы в&nbsp;выживании!
+                            </h1>
+                            <div class="promo__offer-subtitle text-block">
+                                Захватывающая игра с ведущим
+                            </div>
+                            <div class="promo__offer-stats text-block">
+                                <div class="promo__offer-stat icon-users">от 5</div>
+                                <div class="promo__offer-stat icon-currency">4000 ₽</div>
+                                <div class="promo__offer-stat icon-criminal">от 12</div>
+                                <div class="promo__offer-stat icon-time">60 мин</div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="description">
+                    <div class="description__container container-sm">
+                        <h2 class="description__title color-accent">БУНКЕР</h2>
+                        <div class="description__body text-block-lg">
+                            <p>На Землю надвигается глобальная катастрофа. Вам повезло оказаться перед входом в бункер, который способен спасти вас и вашу команду. Но в бункере ограничены места, и только половина из вас сможет спастись!</p>
+                            <p>Бункер — это дискуссионная игра о выживании после глобальной катастрофы! <br> Испытайте свои навыки переговоров и стратегического мышления, погрузившись в атмосферу апокалипсиса. Интересные сценарии катаклизмов и разнообразные характеристики персонажей делают каждую игру увлекательной и непредсказуемой.</p>
+                        </div>
+                        <div class="description__gallery swiper">
+                            <div class="swiper-wrapper">
+                                <a href="@img/bunker/01.png" data-fancybox="quset-gallery" class="description__gallery-item swiper-slide">
+                                    <img src="@img/bunker/01.png" class="cover-image" alt="Фото галлереи">
+                                </a>
+                                <a href="@img/bunker/02.png" data-fancybox="quset-gallery" class="description__gallery-item swiper-slide">
+                                    <img src="@img/bunker/02.png" class="cover-image" alt="Фото галлереи">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="steps">
+                    <div class="steps__container container-sm">
+                        <div class="steps__body">
+                            <h2 class="steps__title">Правила игры</h2>
+                            <ul class="steps__list">
+                                <li class="steps__item">
+                                    <h3 class="steps__caption color-accent">01</h3>
+                                    <p class="steps__desc text-block-lg">Игроки получают карты с уникальными характеристиками: пол, возраст, профессия, здоровье, хобби и др.</p>
+                                </li>
+                                <li class="steps__item">
+                                    <h3 class="steps__caption color-accent">02</h3>
+                                    <p class="steps__desc text-block-lg">Постепенно раскрывая свои карты, участники делятся своими сильными и слабыми сторонами.</p>
+                                </li>
+                                <li class="steps__item">
+                                    <h3 class="steps__caption color-accent">03</h3>
+                                    <p class="steps__desc text-block-lg">В каждом раунде вам предстоит решить, кто не попадает в бункер. Только лучшие смогут выжить и возродить цивилизацию!</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+                <section class="banner">
+                    <div class="banner__body banner__body--center">
+                        <div class="banner__container">
+                            <h2 class="banner__title">
+                                Добро пожаловать в <span class="color-accent">бункер!</span>
+                            </h2>
+                            <div class="banner__desc text-block-lg">
+                                <p>
+                                    Ощутите настоящий адреналин и узнайте, хватит ли у вас навыков, чтобы пережить апокалипсис! Подготовьтесь к неожиданным поворотам и решительным действиям, которые определят ваше будущее.
+                                </p>
+                            </div>
+                            <a href="" class="banner__btn btn btn-secondary">Забронировать</a>
+                        </div>
+                    </div>
+                    <div class="banner__image">
+                        <img src="@img/banners/bunker.jpg" class="cover-image" alt="Баннер">
+                    </div>
+                </section>
+                <div class="quests quests--line">
+                    <div class="quests__body">
+                        <div class="quests__container container-sm">
+                            <h2 class="quests__caption">Другие игры с ведущим</h2>
+                            <ul class="quests__list">
+                                @@loop('./html/templates/_quest.html', [{
+                                "url": "trash-box.html",
+                                "images": "@img/quests/trash-box.jpg",
+                                "title": "Трэш-коробка",
+                                "description": "Увлекательная игра с элементом неожиданности.",
+                                "users": "от 4",
+                                "price": "от 2000 ₽"
+                                },
+                                {
+                                "url": "mafia.html",
+                                "images": "@img/quests/mafia.jpg",
+                                "title": "Мафия",
+                                "description": "Мафия - игра для времен и возрастов!",
+                                "users": "от 6",
+                                "price": "4000 ₽"
+                                },
+                                {
+                                "url": "killer.html",
+                                "images": "@img/quests/killer.jpg",
+                                "title": "Киллер",
+                                "description": "Проверка на ловкость, которая разнообразит досуг любой компании",
+                                "users": "от 4",
+                                "price": "4000 ₽"
+                                }])
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                @@include('html/_contacts-type-5.html', {})
+            </main>
+            @@include('html/_footer.html', {})
+            @@include('html/_modal.html', {})
+            @@include('html/_js.html', {})
+        </div>
+    </body>
+</html>

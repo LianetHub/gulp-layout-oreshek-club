@@ -138,6 +138,11 @@ body {
 			justify-content: center;
 		}
 	}
+	&.promo--games {
+		.promo__container {
+			justify-content: center;
+		}
+	}
 	&.promo--rules {
 		min-height: rem(505);
 		margin-bottom: -8rem;
@@ -437,6 +442,7 @@ body {
 	// .promo__offer-subtitle
 	&__offer-subtitle {
 		margin-top: 0.79rem;
+		max-width: 22rem;
 		@media (min-width: $md4) {
 			margin-top: 1.25rem;
 		}
@@ -557,6 +563,31 @@ body {
 	padding: 0 0 9rem 0;
 	@media (min-width: $md5) {
 		padding: 0 0 15rem 0;
+	}
+	&.quests--line {
+		padding-top: 9rem;
+		position: relative;
+		z-index: 1;
+		&::after {
+			content: "";
+			position: absolute;
+			top: -2rem;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			pointer-events: none;
+			z-index: 3;
+			background: url("@img/decor-line-mobile.svg") 75% top / 32.875rem auto no-repeat;
+			@media (min-width: $md5) {
+				background: url("@img/decor-line.svg") center top / 100% auto no-repeat;
+			}
+			@media (min-width: $md4) {
+				top: -13rem;
+			}
+		}
+		@media (min-width: $md5) {
+			padding-top: 16rem;
+		}
 	}
 	// .quests__header
 	&__header {
@@ -694,6 +725,37 @@ body {
 		margin-left: auto;
 		margin-right: auto;
 	}
+	// .quests__decor
+	&__decor {
+		display: none;
+		@media (min-width: $md3) {
+			display: block;
+			grid-column: span 2;
+			align-self: center;
+			margin-left: auto;
+			position: relative;
+			&::before {
+				content: "";
+				position: absolute;
+				inset: rem(-1);
+				background: linear-gradient(to bottom, $black 0%, transparent) 0 0 / 100% 30% no-repeat,
+					linear-gradient(to top, $black 0%, transparent) 0 bottom / 100% 30% no-repeat, linear-gradient(to right, $black 0%, transparent) 0 0 / 10% 100% no-repeat,
+					linear-gradient(to left, $black 0%, transparent) 100% 0 / 10% 100% no-repeat;
+				pointer-events: none;
+			}
+		}
+		@media (min-width: $md2) {
+			max-width: rem(650);
+		}
+	}
+	// .quests__caption
+	&__caption {
+		text-align: center;
+		margin-bottom: rem(50);
+		@media (min-width: $md4) {
+			margin-bottom: rem(80);
+		}
+	}
 }
 
 .quests-card {
@@ -793,6 +855,7 @@ body {
 				display: none;
 			}
 		}
+
 		@media (min-width: $md4) {
 			padding: rem(160) 0 rem(220);
 		}
@@ -1021,6 +1084,11 @@ body {
 		@media (min-width: $md4) {
 			margin-top: rem(30);
 		}
+	}
+	// .steps__btn
+	&__btn {
+		margin-top: rem(29);
+		min-width: rem(232);
 	}
 }
 
