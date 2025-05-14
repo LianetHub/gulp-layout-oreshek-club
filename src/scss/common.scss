@@ -76,7 +76,7 @@ body {
 	background-position: center;
 	display: flex;
 	flex-direction: column;
-	min-height: rem(505);
+	min-height: rem(550);
 	padding-bottom: 2.43rem;
 	&:not(:last-child) {
 		& + * {
@@ -502,14 +502,12 @@ body {
 	&__offer-stats {
 		display: flex;
 		flex-wrap: wrap;
-		column-gap: 1.58rem;
+		column-gap: 1.5rem;
 		row-gap: 0.32rem;
 		margin-top: 0.79rem;
-		max-width: 12rem;
+		max-width: 14rem;
 		@media (min-width: $md4) {
-			column-gap: 2.5rem;
 			row-gap: 0.5rem;
-			max-width: 18rem;
 			margin-top: 1.25rem;
 		}
 	}
@@ -518,6 +516,7 @@ body {
 		display: flex;
 		align-items: center;
 		gap: rem(10);
+		flex: 0 0 calc(50% - 0.75rem);
 		&::before {
 			width: 0.94556rem;
 			height: 0.94556rem;

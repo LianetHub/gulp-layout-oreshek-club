@@ -42,7 +42,7 @@
 		&.description__image--small {
 			margin-bottom: 0;
 			@media (min-width: $md4) {
-				max-width: 66.66%;
+				max-width: 60%;
 			}
 			&::before {
 				content: "";

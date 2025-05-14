@@ -19,9 +19,25 @@
 @font-face {
   font-family: "Inter";
   font-display: swap;
+  src: url("../fonts/Inter-Bold.woff2") format("woff2"), url("../fonts/Inter-Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Inter";
+  font-display: swap;
   src: url("../fonts/Inter-Black.woff2") format("woff2"), url("../fonts/Inter-Black.woff") format("woff");
   font-weight: 900;
   font-style: normal;
+}
+
+@font-face {
+  font-family: "Inter";
+  font-display: swap;
+  src: url("../fonts/Inter-Italic.woff2") format("woff2"), url("../fonts/Inter-Italic.woff") format("woff");
+  font-weight: 400;
+  font-style: italic;
 }
 
 @font-face {
@@ -40,24 +56,9 @@
   font-style: normal;
 }
 
-@font-face {
-  font-family: "Inter";
-  font-display: swap;
-  src: url("../fonts/Inter-Bold.woff2") format("woff2"), url("../fonts/Inter-Bold.woff") format("woff");
-  font-weight: 700;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Inter";
-  font-display: swap;
-  src: url("../fonts/Inter-Italic.woff2") format("woff2"), url("../fonts/Inter-Italic.woff") format("woff");
-  font-weight: 400;
-  font-style: italic;
-}
-
 .form__select::before,
 .form__checkbox-input:checked + .form__checkbox-text::before,
+.widget.active .widget__toggler::before,
 [class^=icon-]:before,
 [class*=" icon-"]:before {
   font-family: "icons";
@@ -89,7 +90,8 @@
   content: "\e906";
 }
 
-.icon-close:before {
+.icon-close:before,
+.widget.active .widget__toggler:before {
   content: "\e904";
 }
 
@@ -210,6 +212,10 @@ h4,
 .widget.active .widget__toggler {
   -webkit-animation: none;
           animation: none;
+}
+
+.widget.active .widget__toggler::before {
+  font-size: 2rem;
 }
 
 .widget__toggler::after {
@@ -896,7 +902,7 @@ body.lock {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  min-height: 31.5625rem;
+  min-height: 34.375rem;
   padding-bottom: 2.43rem;
 }
 
@@ -1215,12 +1221,12 @@ body.lock {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  -webkit-column-gap: 1.58rem;
-     -moz-column-gap: 1.58rem;
-          column-gap: 1.58rem;
+  -webkit-column-gap: 1.5rem;
+     -moz-column-gap: 1.5rem;
+          column-gap: 1.5rem;
   row-gap: 0.32rem;
   margin-top: 0.79rem;
-  max-width: 12rem;
+  max-width: 14rem;
 }
 
 .promo__offer-stat {
@@ -1231,6 +1237,9 @@ body.lock {
       -ms-flex-align: center;
           align-items: center;
   gap: 0.625rem;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 calc(50% - 0.75rem);
+          flex: 0 0 calc(50% - 0.75rem);
 }
 
 .promo__offer-stat::before {
@@ -3121,9 +3130,9 @@ body.lock {
   }
 
   .widget__toggler {
-    font-size: 3.1875rem;
-    width: 5.625rem;
-    height: 5.625rem;
+    font-size: 2.75rem;
+    width: 4.5rem;
+    height: 4.5rem;
   }
 
   .fancybox__slide {
@@ -3508,11 +3517,7 @@ body.lock {
   }
 
   .promo__offer-stats {
-    -webkit-column-gap: 2.5rem;
-       -moz-column-gap: 2.5rem;
-            column-gap: 2.5rem;
     row-gap: 0.5rem;
-    max-width: 18rem;
     margin-top: 1.25rem;
   }
 
@@ -3709,7 +3714,7 @@ body.lock {
   }
 
   .description__image.description__image--small {
-    max-width: 66.66%;
+    max-width: 60%;
   }
 
   .description__body:not(:first-child) {

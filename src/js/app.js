@@ -90,6 +90,10 @@ document.addEventListener("DOMContentLoaded", () => {
             document.querySelector('.widget')?.classList.toggle('active')
         }
 
+        if (!target.closest('.widget') && document.querySelector('.widget').classList.contains('active')) {
+            document.querySelector('.widget')?.classList.remove('active')
+        }
+
         if (target.matches('.booking__filters-btn')) {
             document.querySelectorAll('.booking__filters-btn')?.forEach(bookingFilterBtn => {
                 bookingFilterBtn.classList.remove('active');

@@ -96,11 +96,17 @@ h4,
 		animation: pulse 2s infinite;
 		.widget.active & {
 			animation: none;
+			&::before {
+				@extend %ic, .icon-close;
+				font-size: 2rem;
+			}
 		}
 		@media (min-width: $md5) {
-			font-size: 3.1875rem;
-			width: 5.625rem;
-			height: 5.625rem;
+			font-size: 2.75rem;
+			width: 4.5rem;
+			height: 4.5rem;
+		}
+		&::before {
 		}
 		&::after {
 			content: "";
