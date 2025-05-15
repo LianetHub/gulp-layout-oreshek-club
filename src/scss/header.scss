@@ -139,7 +139,7 @@
 	}
 	// .menu__body
 	&__body {
-		background: $yellow;
+		background: url("@img/menu-bg.png") center / cover no-repeat, $yellow;
 		color: $black;
 		max-width: rem(416);
 		margin-left: auto;
