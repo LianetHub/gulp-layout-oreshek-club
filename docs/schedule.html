@@ -29,11 +29,11 @@
 	<link rel="manifest" href="/site.webmanifest" />
 	<!-- favicon -->
 	<!-- plugins -->
-	<link rel="stylesheet" href="css/libs/swiper-bundle.min.css?_v=20250515202520">
-	<link rel="stylesheet" href="css/libs/fancybox.min.css?_v=20250515202520">
+	<link rel="stylesheet" href="css/libs/swiper-bundle.min.css?_v=20250522172559">
+	<link rel="stylesheet" href="css/libs/fancybox.min.css?_v=20250522172559">
 	<!-- plugins -->
-	<link rel="stylesheet" href="css/reset.min.css?_v=20250515202520">
-	<link rel="stylesheet" href="css/style.min.css?_v=20250515202520">
+	<link rel="stylesheet" href="css/reset.min.css?_v=20250522172559">
+	<link rel="stylesheet" href="css/style.min.css?_v=20250522172559">
 </head>
 
 <body>
@@ -269,9 +269,9 @@
 					<div class="quests__container">
 						<h2 class="quests__title"> Квесты </h2>
 						<div class="quests__filters">
-							<a href="" class="quests__filter active">Все</a>
-							<a href="" class="quests__filter">Мытищи</a>
-							<a href="" class="quests__filter">Королев</a>
+							<button type="button" data-quest-category="all" class="quests__filter active">Все</button>
+							<button type="button" data-quest-category="mytishchi" class="quests__filter">Мытищи</button>
+							<button type="button" data-quest-category="koroljov" class="quests__filter">Королев</button>
 						</div>
 						<div class="quests__overlay">
 							<img src="img/promo/quests-overlay.png" class="cover-image" alt="Промо изображение">
@@ -281,7 +281,7 @@
 				<div class="quests__body quests__body--decor">
 					<div class="quests__container container-sm">
 						<ul class="quests__list">
-							<li class="quests__item">
+							<li class="quests__item" data-category="mytishchi">
 								<a href="mafia-den.html" class="quests-card">
 									<span class="quests-card__poster">
 										<img src="img/quests/mafia-den.jpg" class="cover-image" alt="Постер квеста">
@@ -296,7 +296,7 @@
 									</span>
 								</a>
 							</li>
-							<li class="quests__item">
+							<li class="quests__item" data-category="koroljov">
 								<a href="gunnars-hut.html" class="quests-card">
 									<span class="quests-card__poster">
 										<img src="img/quests/gunnars-hut.jpg" class="cover-image" alt="Постер квеста">
@@ -311,7 +311,7 @@
 									</span>
 								</a>
 							</li>
-							<li class="quests__item">
+							<li class="quests__item" data-category="mytishchi">
 								<a href="baba-yaga.html" class="quests-card">
 									<span class="quests-card__poster">
 										<img src="img/quests/baba-yaga.jpg" class="cover-image" alt="Постер квеста">
@@ -326,7 +326,7 @@
 									</span>
 								</a>
 							</li>
-							<li class="quests__item">
+							<li class="quests__item" data-category="mytishchi">
 								<a href="musketeers.html" class="quests-card">
 									<span class="quests-card__poster">
 										<img src="img/quests/musketeers.jpg" class="cover-image" alt="Постер квеста">
@@ -341,7 +341,7 @@
 									</span>
 								</a>
 							</li>
-							<li class="quests__item">
+							<li class="quests__item" data-category="koroljov">
 								<a href="witch-house.html" class="quests-card">
 									<span class="quests-card__poster">
 										<img src="img/quests/witch-house.jpg" class="cover-image" alt="Постер квеста">
@@ -356,7 +356,7 @@
 									</span>
 								</a>
 							</li>
-							<li class="quests__item">
+							<li class="quests__item" data-category="koroljov">
 								<a href="poltergeist.html" class="quests-card">
 									<span class="quests-card__poster">
 										<img src="img/quests/poltergeist.jpg" class="cover-image" alt="Постер квеста">
@@ -462,7 +462,6 @@
 				<div class="footer__bottom">
 					<a href="privacy.html" class="footer__link">Политика конфиденциальности</a>
 					<a href="oferta.html" class="footer__link">Оферта</a>
-					<a href="https://notfatfox.ru/" target="_blank" class="footer__link">Дизайн сайта notfatfox</a>
 				</div>
 			</div>
 		</footer>
@@ -526,10 +525,10 @@
 				<button type="submit" class="form__btn btn btn-primary">Забронировать</button>
 			</form>
 		</div> <!-- plugins -->
-		<script src="js/libs/fancybox.umd.js?_v=20250515202520"></script>
-		<script src="js/libs/swiper-bundle.min.js?_v=20250515202520"></script>
+		<script src="js/libs/fancybox.umd.js?_v=20250522172559"></script>
+		<script src="js/libs/swiper-bundle.min.js?_v=20250522172559"></script>
 		<!-- plugins -->
-		<script src="js/app.min.js?_v=20250515202520"></script>
+		<script src="js/app.min.js?_v=20250522172559"></script>
 	</div>
 </body>
 

@@ -133,6 +133,25 @@ document.addEventListener("DOMContentLoaded", () => {
             });
         }
 
+        if (target.matches('.quests__filter')) {
+            const selectedCategory = target.getAttribute('data-quest-category');
+            const filterButtons = document.querySelectorAll('.quests__filter');
+            const questItems = document.querySelectorAll('.quests__item');
+
+            filterButtons.forEach(btn => btn.classList.remove('active'));
+            target.classList.add('active');
+
+
+            questItems.forEach(item => {
+                const itemCategory = item.getAttribute('data-category');
+                if (selectedCategory === 'all' || itemCategory === selectedCategory) {
+                    item.style.display = '';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        }
+
 
 
     });

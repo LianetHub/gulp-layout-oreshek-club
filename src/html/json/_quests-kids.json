@@ -1,5 +1,6 @@
 [
     {
+        "category": "mytishchi",
         "url": "musketeers.html",
         "images": "@img/quests/musketeers.jpg",
         "title": "Мушкетеры в <span class='color-accent'>замке кардинала</span>",
@@ -8,6 +9,7 @@
         "price": "6000 ₽"
     },
     {
+        "category": "koroljov",
         "url": "witch-house.html",
         "images": "@img/quests/witch-house.jpg",
         "title": "Дом <span class='color-accent'>Ведьмы</span>",
@@ -16,6 +18,7 @@
         "price": "6000 ₽"
     },
     {
+        "category": "mytishchi",
         "url": "baba-yaga.html",
         "images": "@img/quests/baba-yaga.jpg",
         "title": "Баба-Яга",
