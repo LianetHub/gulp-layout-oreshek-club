@@ -95,13 +95,18 @@ document.addEventListener("DOMContentLoaded", () => {
         }
 
         if (target.matches('.booking__filters-btn')) {
-            document.querySelectorAll('.booking__filters-btn')?.forEach(bookingFilterBtn => {
-                bookingFilterBtn.classList.remove('active');
-            })
+
+            const tabs = document.querySelectorAll('.booking__filters-btn');
+            const contents = document.querySelectorAll('.booking__tab-block');
+
+            const tabIndex = [...tabs].indexOf(target);
+
+            tabs.forEach(tab => tab.classList.remove('active'));
             target.classList.add('active');
-            document.querySelectorAll('[data-title]')?.forEach(titleBlock => {
-                titleBlock.dataset.title = target.textContent;
-            })
+
+            contents.forEach((content, index) => {
+                content.classList.toggle('active', index === tabIndex);
+            });
 
             const spollerBtn = document.querySelector('.booking__spoller');
             if (spollerBtn) {

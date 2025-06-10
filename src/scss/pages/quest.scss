@@ -32,6 +32,12 @@
 			background: url("@img/dragon.png") 0 0 / auto 100% no-repeat;
 		}
 	}
+	& + .contacts {
+		@media (min-width: $md4) {
+			margin-top: -4rem;
+		}
+	}
+
 	// .description__image
 	&__image {
 		max-width: 90%;
@@ -503,6 +509,23 @@
 			margin-top: 3.75rem;
 		}
 	}
+	// .booking__tabs-blocks
+	&__tabs-blocks {
+		.booking__body {
+			margin-top: 0;
+		}
+		margin-top: 4rem;
+		@media (min-width: $md4) {
+			margin-top: 6.69rem;
+		}
+	}
+	// .booking__tabs-block
+	&__tab-block {
+		display: none;
+		&.active {
+			display: block;
+		}
+	}
 	// .booking__body
 	&__body {
 		margin-top: 4rem;
@@ -620,6 +643,121 @@
 		margin-top: 4.62rem;
 		@media (min-width: $md4) {
 			margin-top: 7rem;
+		}
+	}
+}
+
+.maifa-rules {
+	padding: 2.5rem 0 5rem;
+	@media (min-width: $md4) {
+		padding: 4rem 0 8rem;
+	}
+	position: relative;
+	&::after {
+		@media (min-width: $md5) {
+			content: "";
+			position: absolute;
+			bottom: 0;
+			left: 50%;
+			transform: translate(-50%, 0);
+			width: 100vw;
+			aspect-ratio: math.div(1440, 424);
+			pointer-events: none;
+			z-index: 1;
+			background: url("@img/decor-line.svg") center / 100% auto no-repeat;
+		}
+	}
+	@media (min-width: $md5) {
+		& + .maifa-rules {
+			&::after {
+				bottom: 25%;
+			}
+		}
+	}
+	// .maifa-rules__container
+	&__container {
+	}
+	// .maifa-rules__title
+	&__title {
+		text-align: center;
+	}
+	// .maifa-rules__columns
+	&__columns {
+		display: grid;
+		margin-top: rem(30);
+		gap: rem(30);
+		@media (min-width: $md3) {
+			margin-top: rem(80);
+			gap: rem(40);
+			grid-template-columns: repeat(2, 1fr);
+		}
+	}
+	// .maifa-rules__column
+	&__column {
+		&:nth-child(odd) {
+			.maifa-rules__image {
+				@media (min-width: $md3) {
+					margin-left: -16rem;
+				}
+			}
+		}
+		&:nth-child(even) {
+			.maifa-rules__image {
+				@media (min-width: $md3) {
+					margin-right: -16rem;
+				}
+			}
+		}
+	}
+	// .maifa-rules__caption
+	&__caption {
+		margin-bottom: rem(20);
+		text-align: center;
+		@media (min-width: $md3) {
+			text-align: left;
+		}
+	}
+	// .maifa-rules__block
+	&__block {
+		position: relative;
+		z-index: 2;
+		&:not(:last-child) {
+			margin-bottom: 2rem;
+			@media (min-width: $md4) {
+				margin-bottom: 4rem;
+			}
+		}
+	}
+	// .maifa-rules__block-caption
+	&__block-caption {
+		margin-bottom: 1.5rem;
+		font-weight: 700;
+	}
+	// .maifa-rules__block-desc
+	&__block-desc {
+		&:not(:last-child) {
+			margin-bottom: 1.5em;
+		}
+	}
+	// .maifa-rules__image
+	&__image {
+		position: relative;
+		&::before {
+			content: "";
+			position: absolute;
+			inset: rem(-1);
+			background: linear-gradient(to bottom, $black 0%, transparent) 0 0 / 100% 30% no-repeat, linear-gradient(to top, $black 0%, transparent) 0 bottom / 100% 30% no-repeat,
+				linear-gradient(to right, $black 0%, transparent) 0 0 / 30% 100% no-repeat, linear-gradient(to left, $black 0%, transparent) 100% 0 / 30% 100% no-repeat;
+			pointer-events: none;
+		}
+	}
+	&__tagline {
+		text-align: center;
+		max-width: 35rem;
+		margin: 0 auto;
+		padding: 3rem 0;
+		@media (min-width: $md5) {
+			padding: 6rem 0;
 		}
 	}
 }

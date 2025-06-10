@@ -27,16 +27,16 @@
 @font-face {
   font-family: "Inter";
   font-display: swap;
-  src: url("../fonts/Inter-Regular.woff2") format("woff2"), url("../fonts/Inter-Regular.woff") format("woff");
+  src: url("../fonts/Inter-Italic.woff2") format("woff2"), url("../fonts/Inter-Italic.woff") format("woff");
   font-weight: 400;
-  font-style: normal;
+  font-style: italic;
 }
 
 @font-face {
   font-family: "Inter";
   font-display: swap;
-  src: url("../fonts/Inter-Bold.woff2") format("woff2"), url("../fonts/Inter-Bold.woff") format("woff");
-  font-weight: 700;
+  src: url("../fonts/Inter-Regular.woff2") format("woff2"), url("../fonts/Inter-Regular.woff") format("woff");
+  font-weight: 400;
   font-style: normal;
 }
 
@@ -51,9 +51,9 @@
 @font-face {
   font-family: "Inter";
   font-display: swap;
-  src: url("../fonts/Inter-Italic.woff2") format("woff2"), url("../fonts/Inter-Italic.woff") format("woff");
-  font-weight: 400;
-  font-style: italic;
+  src: url("../fonts/Inter-Bold.woff2") format("woff2"), url("../fonts/Inter-Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
 }
 
 .form__select::before,
@@ -2688,6 +2688,22 @@ body.lock {
   margin-right: auto;
 }
 
+.booking__tabs-blocks {
+  margin-top: 4rem;
+}
+
+.booking__tabs-blocks .booking__body {
+  margin-top: 0;
+}
+
+.booking__tab-block {
+  display: none;
+}
+
+.booking__tab-block.active {
+  display: block;
+}
+
 .booking__body {
   margin-top: 4rem;
 }
@@ -2803,6 +2819,65 @@ body.lock {
   display: -ms-flexbox;
   display: flex;
   margin-top: 4.62rem;
+}
+
+.maifa-rules {
+  padding: 2.5rem 0 5rem;
+  position: relative;
+}
+
+.maifa-rules__title {
+  text-align: center;
+}
+
+.maifa-rules__columns {
+  display: -ms-grid;
+  display: grid;
+  margin-top: 1.875rem;
+  gap: 1.875rem;
+}
+
+.maifa-rules__caption {
+  margin-bottom: 1.25rem;
+  text-align: center;
+}
+
+.maifa-rules__block {
+  position: relative;
+  z-index: 2;
+}
+
+.maifa-rules__block:not(:last-child) {
+  margin-bottom: 2rem;
+}
+
+.maifa-rules__block-caption {
+  margin-bottom: 1.5rem;
+  font-weight: 700;
+}
+
+.maifa-rules__block-desc:not(:last-child) {
+  margin-bottom: 1.5em;
+}
+
+.maifa-rules__image {
+  position: relative;
+}
+
+.maifa-rules__image::before {
+  content: "";
+  position: absolute;
+  inset: -0.0625rem;
+  background: -webkit-gradient(linear, left top, left bottom, from(#000), to(transparent)) 0 0/100% 30% no-repeat, -webkit-gradient(linear, left bottom, left top, from(#000), to(transparent)) 0 bottom/100% 30% no-repeat, -webkit-gradient(linear, left top, right top, from(#000), to(transparent)) 0 0/30% 100% no-repeat, -webkit-gradient(linear, right top, left top, from(#000), to(transparent)) 100% 0/30% 100% no-repeat;
+  background: linear-gradient(to bottom, #000 0%, transparent) 0 0/100% 30% no-repeat, linear-gradient(to top, #000 0%, transparent) 0 bottom/100% 30% no-repeat, linear-gradient(to right, #000 0%, transparent) 0 0/30% 100% no-repeat, linear-gradient(to left, #000 0%, transparent) 100% 0/30% 100% no-repeat;
+  pointer-events: none;
+}
+
+.maifa-rules__tagline {
+  text-align: center;
+  max-width: 35rem;
+  margin: 0 auto;
+  padding: 3rem 0;
 }
 
 .birthday {
@@ -2924,7 +2999,13 @@ body.lock {
 }
 
 .about__desc {
+  position: relative;
+  z-index: 2;
   text-align: center;
+}
+
+.about__desc p:not(:last-child) {
+  margin-bottom: 1.5rem;
 }
 
 .location {
@@ -3315,6 +3396,29 @@ body.lock {
     -webkit-box-flex: 0;
         -ms-flex: 0 1 auto;
             flex: 0 1 auto;
+  }
+
+  .maifa-rules::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    -webkit-transform: translate(-50%, 0);
+        -ms-transform: translate(-50%, 0);
+            transform: translate(-50%, 0);
+    width: 100vw;
+    aspect-ratio: 3.3962264151;
+    pointer-events: none;
+    z-index: 1;
+    background: url("../img/decor-line.svg") center/100% auto no-repeat;
+  }
+
+  .maifa-rules + .maifa-rules::after {
+    bottom: 25%;
+  }
+
+  .maifa-rules__tagline {
+    padding: 6rem 0;
   }
 
   .location::after {
@@ -3713,6 +3817,10 @@ body.lock {
     background: url("../img/dragon.png") 0 0/auto 100% no-repeat;
   }
 
+  .description + .contacts {
+    margin-top: -4rem;
+  }
+
   .description__image.description__image--small {
     max-width: 60%;
   }
@@ -3816,6 +3924,10 @@ body.lock {
     margin-top: 3.75rem;
   }
 
+  .booking__tabs-blocks {
+    margin-top: 6.69rem;
+  }
+
   .booking__body {
     margin-top: 6.69rem;
   }
@@ -3858,6 +3970,14 @@ body.lock {
 
   .booking__more {
     margin-top: 7rem;
+  }
+
+  .maifa-rules {
+    padding: 4rem 0 8rem;
+  }
+
+  .maifa-rules__block:not(:last-child) {
+    margin-bottom: 4rem;
   }
 
   .birthday {
@@ -4038,6 +4158,25 @@ body.lock {
     margin-bottom: 0;
   }
 
+  .maifa-rules__columns {
+    margin-top: 5rem;
+    gap: 2.5rem;
+    -ms-grid-columns: (1fr)[2];
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .maifa-rules__column:nth-child(odd) .maifa-rules__image {
+    margin-left: -16rem;
+  }
+
+  .maifa-rules__column:nth-child(even) .maifa-rules__image {
+    margin-right: -16rem;
+  }
+
+  .maifa-rules__caption {
+    text-align: left;
+  }
+
   .birthday__cards {
     margin-top: 5rem;
     gap: 2.5rem;
@@ -4057,10 +4196,20 @@ body.lock {
     grid-template-columns: repeat(2, 1fr);
   }
 
+  .about__body:has(.about__desc--large) {
+    -ms-grid-columns: 2fr 1fr;
+    grid-template-columns: 2fr 1fr;
+  }
+
   .about__image {
     -webkit-box-ordinal-group: 1;
         -ms-flex-order: 0;
             order: 0;
+  }
+
+  .about__image:last-child {
+    margin-left: -8rem;
+    margin-right: -8rem;
   }
 
   .about__desc {
