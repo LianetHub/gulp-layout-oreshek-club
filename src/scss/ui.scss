@@ -93,6 +93,7 @@ h4,
 		font-size: 1.5rem;
 		width: 3rem;
 		height: 3rem;
+
 		animation: pulse 2s infinite;
 		.widget.active & {
 			animation: none;
@@ -102,7 +103,7 @@ h4,
 			}
 		}
 		@media (min-width: $md5) {
-			font-size: 2.75rem;
+			font-size: 2.5rem;
 			width: 4.5rem;
 			height: 4.5rem;
 		}
