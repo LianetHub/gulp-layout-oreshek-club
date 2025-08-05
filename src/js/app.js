@@ -17,6 +17,9 @@ document.addEventListener("DOMContentLoaded", () => {
                 ready: (fancybox) => {
                     const trigger = fancybox.options.triggerEl;
 
+                    console.log();
+
+
                     if (trigger && trigger.classList.contains('booking__time')) {
 
 
@@ -24,7 +27,7 @@ document.addEventListener("DOMContentLoaded", () => {
                         const price = trigger.dataset.price;
                         const title = trigger.dataset.title;
 
-                        const popup = document.getElementById('booking');
+                        const popup = document.getElementById(trigger.getAttribute('href').replace("#", ""));
 
                         if (popup) {
                             const dateInput = popup.querySelector('.quest-date');
