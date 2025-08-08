@@ -17,43 +17,67 @@ document.addEventListener("DOMContentLoaded", () => {
                 ready: (fancybox) => {
                     const trigger = fancybox.options.triggerEl;
 
-                    console.log();
-
-
                     if (trigger && trigger.classList.contains('booking__time')) {
-
-
                         const datetime = trigger.dataset.datetime;
-                        const price = trigger.dataset.price;
                         const title = trigger.dataset.title;
 
-                        const popup = document.getElementById(trigger.getAttribute('href').replace("#", ""));
 
+                        const counts = trigger.dataset.count ? JSON.parse(trigger.dataset.count) : [];
+                        const prices = trigger.dataset.price ? JSON.parse(trigger.dataset.price) : [];
+
+                        const popup = document.getElementById(trigger.getAttribute('href').replace("#", ""));
                         if (popup) {
                             const dateInput = popup.querySelector('.quest-date');
                             const priceEl = popup.querySelector('.quest-price');
                             const titleInput = popup.querySelector('.quest-name');
+                            const countSelect = popup.querySelector('.count-players');
+
 
                             const [datePart, timePart] = datetime.split('T');
                             const [year, month, day] = datePart.split('-');
-
                             const monthsRu = [
                                 'января', 'февраля', 'марта', 'апреля', 'мая', 'июня',
                                 'июля', 'августа', 'сентября', 'октября', 'ноября', 'декабря'
                             ];
-
                             const formattedDate = `${parseInt(day)} ${monthsRu[parseInt(month) - 1]} ${year}, ${timePart}`;
 
 
                             if (dateInput) dateInput.value = formattedDate;
-                            if (priceEl) priceEl.textContent = `${price} руб.`;
                             if (titleInput) titleInput.value = title;
+
+
+                            if (countSelect) {
+                                countSelect.innerHTML = '';
+                                counts.forEach((countOption, index) => {
+                                    const opt = document.createElement('option');
+                                    opt.value = countOption;
+                                    opt.textContent = countOption;
+                                    opt.dataset.price = prices[index] || '';
+                                    countSelect.appendChild(opt);
+                                });
+
+
+                                if (priceEl) {
+                                    const firstPrice = prices[0] || '';
+                                    priceEl.textContent = firstPrice ? `${firstPrice} руб.` : '';
+                                }
+
+
+                                countSelect.addEventListener('change', function () {
+                                    const selectedIndex = this.selectedIndex;
+                                    const newPrice = prices[selectedIndex] || '';
+                                    if (priceEl) {
+                                        priceEl.textContent = newPrice ? `${newPrice} руб.` : '';
+                                    }
+                                });
+                            }
                         }
                     }
                 }
             }
         });
     }
+
 
 
 
